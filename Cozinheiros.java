@@ -32,4 +32,16 @@ public class Cozinheiros {
         return this.mediaAvaliacao;
 
     }
+
+    public void exibirCardapio(){
+        int i;
+        for(i=0; i<this.cardapio.length;i++){
+            System.out.println((i + 1) + " - " + this.cardapio[i]);
+        }
+    }
+
+    public void adcionarOpcaoNoCardapio (String prato){
+        this.cardapio[quantidadeDeCardapios] = prato;
+        quantidadeDeCardapios++;
+    }
 }
