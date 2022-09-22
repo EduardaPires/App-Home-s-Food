@@ -20,7 +20,6 @@ public class Cozinheiros {
 
         this.avaliacao = avaliacao;
         this.quantidadeDeAvaliacoes++;
-
         return this.avaliacao;
 
     }
@@ -28,7 +27,6 @@ public class Cozinheiros {
     public float media(){
 
         this.mediaAvaliacao = this.avaliacao/this.quantidadeDeAvaliacoes;
-
         return this.mediaAvaliacao;
 
     }
