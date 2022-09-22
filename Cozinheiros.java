@@ -6,6 +6,7 @@ public class Cozinheiros {
     private int quantidadeDeCardapios;
     private float avaliacao; 
     private float mediaAvaliacao;//media das avaliacoes
+    private int quantidadeDeAvaliacoes;
     public Cozinheiros(String nomeUser, String email, int senha, String cardapio, int quantidadeDeCardapios, float avaliacao, float mediaAvaliacao){
         this.nomeUser=nomeUser;
         this.email=email;
@@ -13,6 +14,22 @@ public class Cozinheiros {
         this.cardapio= new String [quantidadeDeCardapios];
         this.quantidadeDeCardapios=quantidadeDeCardapios;
         this.avaliacao=avaliacao;
-        this.mediaAvaliacao=mediaAvaliacao;
+    }
+
+    public float avaliacao(float avaliacao){
+
+        this.avaliacao = avaliacao;
+        this.quantidadeDeAvaliacoes++;
+
+        return this.avaliacao;
+
+    }
+
+    public float media(){
+
+        this.mediaAvaliacao = this.avaliacao/this.quantidadeDeAvaliacoes;
+
+        return this.mediaAvaliacao;
+
     }
 }
