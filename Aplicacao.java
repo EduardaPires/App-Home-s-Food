@@ -22,12 +22,15 @@ public class Aplicacao {
     }
 
     public static void main(String[] args) {
-    //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
+        //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
        // System.out.println(exibir); = 
        //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
        //sysout opções de entrar como cozinheiro e cliente-> no cozinheiro, opção de mostrar pedidos
        //sysout entrar como cozinheiro 
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
+       //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
+       //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
+
     }
 
 
