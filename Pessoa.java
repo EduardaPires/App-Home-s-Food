@@ -17,12 +17,16 @@ public class Pessoa {
     public int getSenha() {
         return senha;
     }
+    public String getUser() {
+        return user;
+    }
     public void setNome(String nome) {
         this.nome = nome;
     }
     public void setSenha(int senha) {
         this.senha = senha;
     }
-    
-
+    public void setUser(String user) {
+        this.user = user;
+    }
 }
