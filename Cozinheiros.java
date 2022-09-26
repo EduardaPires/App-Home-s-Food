@@ -16,6 +16,55 @@ public class Cozinheiros {
         this.avaliacao=avaliacao;
     }
 
+    public float getAvaliacao() {
+        return avaliacao;
+    }
+    public String[] getCardapio() {
+        return cardapio;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public float getMediaAvaliacao() {
+        return mediaAvaliacao;
+    }
+    public String getNomeUser() {
+        return nomeUser;
+    }
+    public int getQuantidadeDeAvaliacoes() {
+        return quantidadeDeAvaliacoes;
+    }
+    public int getQuantidadeDeCardapios() {
+        return quantidadeDeCardapios;
+    }
+    public int getSenha() {
+        return senha;
+    }
+    public void setAvaliacao(float avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+    public void setCardapio(String[] cardapio) {
+        this.cardapio = cardapio;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setMediaAvaliacao(float mediaAvaliacao) {
+        this.mediaAvaliacao = mediaAvaliacao;
+    }
+    public void setNomeUser(String nomeUser) {
+        this.nomeUser = nomeUser;
+    }
+    public void setQuantidadeDeAvaliacoes(int quantidadeDeAvaliacoes) {
+        this.quantidadeDeAvaliacoes = quantidadeDeAvaliacoes;
+    }
+    public void setQuantidadeDeCardapios(int quantidadeDeCardapios) {
+        this.quantidadeDeCardapios = quantidadeDeCardapios;
+    }
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+
     public float avaliacao(float avaliacao){
 
         this.avaliacao = avaliacao;
@@ -25,10 +74,8 @@ public class Cozinheiros {
     }
 
     public float media(){
-
         this.mediaAvaliacao = this.avaliacao/this.quantidadeDeAvaliacoes;
         return this.mediaAvaliacao;
-
     }
 
     public void exibirCardapio(){
