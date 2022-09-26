@@ -1,8 +1,11 @@
+import java.util.Scanner;
+
 public class Cozinheiros extends Pessoa{
 
   //  private String nomeUser;
   //  private String email;
   //  private int senha;
+    Scanner sc = new Scanner(System.in);
     private String[] cardapio;
     private int quantidadeDeCardapios;
     private float avaliacao; 
@@ -19,6 +22,77 @@ public class Cozinheiros extends Pessoa{
         this.quantidadeDeCardapios=quantidadeDeCardapios;
         this.avaliacao=avaliacao;
     }
+
+    public Pessoa CadastroCozinheiro() {
+        Pessoa perfil = new Pessoa(); //em vez de super usar perfil
+        System.out.println("Digite seu nome de usuário: ");
+        String nome = sc.nextLine();
+        perfil.setNome(nome);
+        System.out.println("Digite sua senha: ");
+        int senha = sc.nextInt();
+        perfil.setSenha(senha);
+        String user = "Cozinheiro";
+        perfil.setUser(user);
+        System.out.println("Quantos pratos terá em seu cardápio? ");
+        int quantidadeDeCardapios = sc.nextInt();
+        setQuantidadeDeCardapios(quantidadeDeCardapios);
+        System.out.println("Seus pratos: ");
+        for (int i = 0; i < cardapio.length; i++) {
+            System.out.println((i+1)+ ": ");
+            cardapio[i] = sc.nextLine();
+        }
+        return perfil;
+    }
+
+    public void EntrarCozinheiro() {
+        Pessoa pessoa=CadastroCozinheiro();
+        System.out.println("Digite seu nome de usuário: ");
+        String nome = sc.nextLine();
+        System.out.println("Digite sua senha: ");
+        int senha = sc.nextInt();
+        while (senha != pessoa.getSenha()) {
+            System.out.println("Senha incorreta!");
+            senha = sc.nextInt();
+        }
+        menu();
+        //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
+        //chamará classe FazerPedido
+    }
+
+    public void menu(){
+        Pessoa pessoa=CadastroCozinheiro();
+        System.out.println(pessoa.toString());
+        exibirCardapio();
+    }
+
+    /*public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Pessoa perfil = new Pessoa();
+        System.out.println("Digite seu nome de usuário: ");
+        String nome = sc.nextLine();
+        perfil.setNome(nome);
+        System.out.println("Digite sua senha: ");
+        int senha = sc.nextInt();
+        perfil.setSenha(senha);
+        String user = "Cozinheiro";
+        perfil.setUser(user);
+        System.out.println("Quantos pratos terá em seu cardápio? ");
+        int quantidadeDeCardapios = sc.nextInt();
+       // setQuantidadeDeCardapios(quantidadeDeCardapios);
+       String[] cardapio = new String[quantidadeDeCardapios];
+        System.out.println("Seus pratos: ");
+        //System.out.println((1)+ ": ");
+        cardapio[0] = sc.nextLine();
+        for (int i = 0; i < quantidadeDeCardapios; i++) {
+            System.out.print((i+1)+ ": ");
+            cardapio[i] = sc.nextLine();
+        }
+        System.out.println(perfil.toString());
+        for (int i = 0; i < quantidadeDeCardapios; i++) {
+            System.out.println((i+1)+ ": " + cardapio[i]);
+        }
+
+    }*/
     
    /*  public Cozinheiros(String nomeUser, String email, int senha, String cardapio, int quantidadeDeCardapios, float avaliacao, float mediaAvaliacao){
         this.nomeUser=nomeUser;
