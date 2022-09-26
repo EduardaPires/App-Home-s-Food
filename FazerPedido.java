@@ -10,18 +10,7 @@ public class FazerPedido {
         this.avaliacao=avaliacao;
         this.mediaAvaliacao=mediaAvaliacao;
     }
-    public int getAvaliacao() {
-        return avaliacao;
-    }
-    public int getMediaAvaliacao() {
-        return mediaAvaliacao;
-    }
-    public String[] getPedidos() {
-        return pedidos;
-    }
-    public int getQuantPedidos() {
-        return quantPedidos;
-    }
+    
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
