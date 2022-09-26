@@ -2,8 +2,9 @@
 import java.util.Scanner;
 public class Aplicacao {
     Scanner sc = new Scanner(System.in);
+    //nao herda a superclasse pessoa, apenas a chama
 
-    
+
 
     public void exibirTelaCozinheiro(){
         //chamar metodo exibirCardapio
@@ -26,8 +27,25 @@ public class Aplicacao {
         //}
         System.out.println("==========================");
         int cozinheiro = sc.nextInt();
-        //if 
+        if (cozinheiro==1) {
+            //System.out.println(obj cozinheiro1); --> da classe pessoa 
+            //vai aparecer nome, 
+
+        } 
+        else if (cozinheiro==1) {
         
+        } 
+        else if (cozinheiro==1) {
+        
+        } 
+        else if (cozinheiro==1) {
+        
+        } 
+        else if (cozinheiro==1) {
+        
+        } 
+        else if (cozinheiro==1) {
+        }
         
         
     }
