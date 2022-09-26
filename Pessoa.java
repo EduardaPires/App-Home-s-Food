@@ -1,14 +1,27 @@
 public class Pessoa {
     //atributos que cliente e cozinheiros tem em comum
-    String nome;
-    String email;
-    String senha;
+    private String nome, user;
+    //String email;
+    private int senha;
 
     //construtor(inicializar as variaveis de instancia)
-    public Pessoa(String nome, String email, String senha){
+    public Pessoa(String nome, String user, int senha){
         this.nome=nome;
-        this.email=email;
+       // this.email=email;
         this.senha=senha;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public int getSenha() {
+        return senha;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public void setSenha(int senha) {
+        this.senha = senha;
     }
     
 

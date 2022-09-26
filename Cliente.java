@@ -1,4 +1,8 @@
-public class Cliente {  
+public class Cliente extends Pessoa{  
+
+    public Cliente(String nome, String user, int senha) {
+        super(nome, user, senha);
+    }
 
     public void menu() {
         String meunome="duda", email="@";
