@@ -2,9 +2,9 @@ public class FazerPedido {
     private int quantPedidos; 
     private String[] pedidos; //o tamanho será a quantia de pedidos
     private int avaliacao; 
-    private int mediaAvaliacao;//fazer calculo de média, só vai adiconar, não aparece a avaliação individual; e será feita após o pedido (perguntando se foi recebido)
+    private float mediaAvaliacao;//fazer calculo de média, só vai adiconar, não aparece a avaliação individual; e será feita após o pedido (perguntando se foi recebido)
 
-    public FazerPedido(int quantPedidos, String pedidos, int avaliacao, int mediaAvaliacao){
+    public FazerPedido(int quantPedidos, String pedidos, int avaliacao, float mediaAvaliacao){
         this.quantPedidos=quantPedidos;
         this.pedidos = new String[quantPedidos];
         this.avaliacao=avaliacao;
@@ -17,6 +17,22 @@ public class FazerPedido {
     public String[] selecionarPedidos() {
         //mostraPedidos()
         return null;
+    }
+
+    public int getQuantPedidos(){
+        return this.quantPedidos;
+    }
+
+    public String getPedidos(int cont){
+        return this.pedidos[cont];
+    }
+
+    public int getAvaliacao(){
+        return this.avaliacao;
+    }
+
+    public float getMediaAvaliacao(){
+        return this.mediaAvaliacao;
     }
 
 }
