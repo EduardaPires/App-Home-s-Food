@@ -32,19 +32,19 @@ public class Aplicacao {
             //vai aparecer nome, 
 
         } 
-        else if (cozinheiro==1) {
+        else if (cozinheiro==2) {
         
         } 
-        else if (cozinheiro==1) {
+        else if (cozinheiro==3) {
         
         } 
-        else if (cozinheiro==1) {
+        else if (cozinheiro==4) {
         
         } 
-        else if (cozinheiro==1) {
+        else if (cozinheiro==5) {
         
         } 
-        else if (cozinheiro==1) {
+        else if (cozinheiro==6) {
         }
         
         
