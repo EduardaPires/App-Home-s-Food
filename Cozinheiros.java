@@ -1,8 +1,8 @@
 public class Cozinheiros extends Pessoa{
 
-    private String nomeUser;
+  //  private String nomeUser;
   //  private String email;
-    private int senha;
+  //  private int senha;
     private String[] cardapio;
     private int quantidadeDeCardapios;
     private float avaliacao; 
@@ -11,10 +11,10 @@ public class Cozinheiros extends Pessoa{
 
     
     public Cozinheiros(String nome, String user, int senha) {
-        super(nome, user, senha);
-        this.nomeUser=nomeUser;
+        //super(nome, user, senha);
+       // this.nomeUser=nomeUser;
         //this.email=email;
-        this.senha=senha;
+        //this.senha=senha;
         this.cardapio= new String [quantidadeDeCardapios];
         this.quantidadeDeCardapios=quantidadeDeCardapios;
         this.avaliacao=avaliacao;
@@ -41,18 +41,18 @@ public class Cozinheiros extends Pessoa{
     public float getMediaAvaliacao() {
         return mediaAvaliacao;
     }
-    public String getNomeUser() {
-        return nomeUser;
-    }
+ //   public String getNomeUser() {
+ //       return nomeUser;
+  //  }
     public int getQuantidadeDeAvaliacoes() {
         return quantidadeDeAvaliacoes;
     }
     public int getQuantidadeDeCardapios() {
         return quantidadeDeCardapios;
     }
-    public int getSenha() {
-        return senha;
-    }
+  //  public int getSenha() {
+   //     return senha;
+   /// }
     public void setAvaliacao(float avaliacao) {
         this.avaliacao = avaliacao;
     }
@@ -65,18 +65,18 @@ public class Cozinheiros extends Pessoa{
     public void setMediaAvaliacao(float mediaAvaliacao) {
         this.mediaAvaliacao = mediaAvaliacao;
     }
-    public void setNomeUser(String nomeUser) {
-        this.nomeUser = nomeUser;
-    }
+  //  public void setNomeUser(String nomeUser) {
+ //       this.nomeUser = nomeUser;
+  //  }
     public void setQuantidadeDeAvaliacoes(int quantidadeDeAvaliacoes) {
         this.quantidadeDeAvaliacoes = quantidadeDeAvaliacoes;
     }
     public void setQuantidadeDeCardapios(int quantidadeDeCardapios) {
         this.quantidadeDeCardapios = quantidadeDeCardapios;
     }
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
+  //  public void setSenha(int senha) {
+ //       this.senha = senha;
+  //  }
 
     public float avaliacao(float avaliacao){
 

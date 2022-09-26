@@ -5,11 +5,11 @@ public class Pessoa {
     private int senha;
 
     //construtor(inicializar as variaveis de instancia)
-    public Pessoa(String nome, String user, int senha){
-        this.nome=nome;
+    //public Pessoa(String nome, String user, int senha){
+       // this.nome=nome;
        // this.email=email;
-        this.senha=senha;
-    }
+       // this.senha=senha;
+    //}
 
     public String getNome() {
         return nome;
@@ -28,5 +28,9 @@ public class Pessoa {
     }
     public void setUser(String user) {
         this.user = user;
+    }
+
+    public String toString(){
+        return user + ": " + nome;
     }
 }
