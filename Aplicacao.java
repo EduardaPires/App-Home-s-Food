@@ -64,7 +64,7 @@ public class Aplicacao {
         int senha = 123;
         
         
-        cliente = new Cliente(meunome, email, senha);
+        //pessoa = new Pessoa(nome, email, senha);
 
     }
 
