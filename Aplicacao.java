@@ -55,6 +55,7 @@ public class Aplicacao {
         String nome="", user="";
         int senha=0;
         Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+        Cliente cliente = new Cliente(nome, user, senha);
         //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
        // System.out.println(exibir); = 
        //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
@@ -71,6 +72,9 @@ public class Aplicacao {
         int  selecao1 = sc.nextInt();
         if (selecao1 == 1) {
             cozinheiros.EntrarCozinheiro();
+        }
+        if (selecao1 == 2) {
+            cozinheiros.CadastroCozinheiro();
         }
         
         //pessoa = new Pessoa(nome, email, senha);
