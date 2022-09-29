@@ -51,6 +51,11 @@ public class Aplicacao {
     }
 
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String nome="", user="";
+        int senha=0;
+        Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+        Cliente cliente = new Cliente(nome, user, senha);
         //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
        // System.out.println(exibir); = 
        //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
@@ -59,10 +64,28 @@ public class Aplicacao {
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
        //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
        //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-        String meunome="duda", email="@";
-        Cliente cliente;
-        int senha = 123;
-        
+        System.out.println("========== HOME'S FOOD ==========");
+        System.out.println("1. Entrar como cozinheiro");
+        System.out.println("2. Cadastrar como cozinheiro");
+        System.out.println("3. Entrar como cliente");
+        System.out.println("4. Cadastrar como cliente");
+        int  selecao1 = sc.nextInt();
+        if (selecao1 == 1) {
+            cozinheiros.EntrarCozinheiro();
+        }
+        else if (selecao1 == 2) {
+            cozinheiros.CadastroCozinheiro();
+        }
+        else if (selecao1 == 3) {
+            cliente.EntrarCliente();
+        }
+        else if (selecao1 == 4) {
+            cliente.CadastroCliente();
+        }
+        else {
+            System.out.println("Opção inválida");
+            //while ()
+        }
         
         //pessoa = new Pessoa(nome, email, senha);
 
