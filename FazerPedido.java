@@ -25,7 +25,7 @@ public class FazerPedido {
     }
     
     public void mostrarPedidos() {
-        for(int i = 0; i < pedidos.length; i++){
+        for(int i = 0; i < this.pedidos.length; i++){
             System.out.println(this.pedidos[i]);
         }
 
