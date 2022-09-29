@@ -10,7 +10,7 @@ public class FazerPedido {
         this.avaliacao=avaliacao;
         this.mediaAvaliacao=mediaAvaliacao;
     }
-    
+
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }

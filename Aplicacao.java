@@ -73,8 +73,18 @@ public class Aplicacao {
         if (selecao1 == 1) {
             cozinheiros.EntrarCozinheiro();
         }
-        if (selecao1 == 2) {
+        else if (selecao1 == 2) {
             cozinheiros.CadastroCozinheiro();
+        }
+        else if (selecao1 == 3) {
+            cliente.EntrarCliente();
+        }
+        else if (selecao1 == 4) {
+            cliente.CadastroCliente();
+        }
+        else {
+            System.out.println("Opção inválida");
+            //while ()
         }
         
         //pessoa = new Pessoa(nome, email, senha);
