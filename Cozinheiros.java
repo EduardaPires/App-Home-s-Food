@@ -7,7 +7,7 @@ public class Cozinheiros extends Pessoa{
   //  private int senha;
     Scanner sc = new Scanner(System.in);
     private String[] cardapio;
-    private int quantidadeDeCardapios;
+   // private int quantidadeDeCardapios;
     private float avaliacao; 
     private float mediaAvaliacao;//media das avaliacoes
     private int quantidadeDeAvaliacoes;
@@ -18,8 +18,8 @@ public class Cozinheiros extends Pessoa{
        // this.nomeUser=nomeUser;
         //this.email=email;
         //this.senha=senha;
-        this.cardapio= new String [quantidadeDeCardapios];
-        this.quantidadeDeCardapios=quantidadeDeCardapios;
+        //this.quantidadeDeCardapios=1;
+        this.cardapio = new String[4];
         this.avaliacao=avaliacao;
     }
 
@@ -33,13 +33,21 @@ public class Cozinheiros extends Pessoa{
         perfil.setSenha(senha);
         String user = "Cozinheiro";
         perfil.setUser(user);
+        //Cardapio();
         System.out.println("Quantos pratos terá em seu cardápio? ");
         int quantidadeDeCardapios = sc.nextInt();
-        setQuantidadeDeCardapios(quantidadeDeCardapios);
+        //setQuantidadeDeCardapios(quantidadeDeCardapios);
+        setCardapio(cardapio, quantidadeDeCardapios);
         System.out.println("Seus pratos: ");
-        for (int i = 0; i < cardapio.length; i++) {
-            System.out.println((i+1)+ ": ");
-            cardapio[i] = sc.nextLine();
+        cardapio[0] = sc.nextLine();
+        for (int i = 0; i < quantidadeDeCardapios; i++) {
+            // System.out.println("coloque um pratinho");
+             System.out.println((i+1)+ ": ");
+             cardapio[i] = sc.nextLine();
+         }
+        System.out.println(perfil.toString());
+        for (int i = 0; i < quantidadeDeCardapios; i++) {
+            System.out.println((i+1)+ ": " + cardapio[i]);
         }
         return perfil;
     }
@@ -107,7 +115,7 @@ public class Cozinheiros extends Pessoa{
         return avaliacao;
     }
     public String[] getCardapio() {
-        return cardapio;
+        return this.cardapio;
     }
     //public String getEmail() {
     //    return email;
@@ -121,17 +129,19 @@ public class Cozinheiros extends Pessoa{
     public int getQuantidadeDeAvaliacoes() {
         return quantidadeDeAvaliacoes;
     }
-    public int getQuantidadeDeCardapios() {
-        return quantidadeDeCardapios;
-    }
+   // public int getQuantidadeDeCardapios() {
+   //     return quantidadeDeCardapios;
+   // }
   //  public int getSenha() {
    //     return senha;
    /// }
     public void setAvaliacao(float avaliacao) {
         this.avaliacao = avaliacao;
     }
-    public void setCardapio(String[] cardapio) {
-        this.cardapio = cardapio;
+    public void setCardapio(String[] cardapio, int quantidadeDeCardapios) {
+        //this.cardapio = cardapio;
+        this.cardapio= new String [quantidadeDeCardapios];
+        
     }
    // public void setEmail(String email) {
    //     this.email = email;
@@ -145,9 +155,7 @@ public class Cozinheiros extends Pessoa{
     public void setQuantidadeDeAvaliacoes(int quantidadeDeAvaliacoes) {
         this.quantidadeDeAvaliacoes = quantidadeDeAvaliacoes;
     }
-    public void setQuantidadeDeCardapios(int quantidadeDeCardapios) {
-        this.quantidadeDeCardapios = quantidadeDeCardapios;
-    }
+    
   //  public void setSenha(int senha) {
  //       this.senha = senha;
   //  }
@@ -172,8 +180,8 @@ public class Cozinheiros extends Pessoa{
         }
     }
 
-    public void adcionarOpcaoNoCardapio (String prato){
-        this.cardapio[quantidadeDeCardapios] = prato;
-        quantidadeDeCardapios++;
-    }
+   // public void adcionarOpcaoNoCardapio (String prato){
+   //     this.cardapio[quantidadeDeCardapios] = prato;
+   //     quantidadeDeCardapios++;
+  //  }
 }

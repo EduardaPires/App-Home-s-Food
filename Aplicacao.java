@@ -50,6 +50,15 @@ public class Aplicacao {
         
     }
 
+    public static void opcoes(){
+        System.out.println(" ======= HOME'S FOOD ======= ");
+        System.out.println("1. Entrar como cozinheiro");
+        System.out.println("2. Cadastrar como cozinheiro");
+        System.out.println("3. Entrar como cliente");
+        System.out.println("4. Cadastrar como cliente");
+        System.out.println("5. Sair");
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nome="", user="";
@@ -64,28 +73,40 @@ public class Aplicacao {
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
        //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
        //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-        System.out.println("========== HOME'S FOOD ==========");
-        System.out.println("1. Entrar como cozinheiro");
-        System.out.println("2. Cadastrar como cozinheiro");
-        System.out.println("3. Entrar como cliente");
-        System.out.println("4. Cadastrar como cliente");
-        int  selecao1 = sc.nextInt();
-        if (selecao1 == 1) {
-            cozinheiros.EntrarCozinheiro();
-        }
-        else if (selecao1 == 2) {
-            cozinheiros.CadastroCozinheiro();
-        }
-        else if (selecao1 == 3) {
-            cliente.EntrarCliente();
-        }
-        else if (selecao1 == 4) {
-            cliente.CadastroCliente();
-        }
-        else {
-            System.out.println("Opção inválida");
-            //while ()
-        }
+       opcoes(); 
+       int selecao1 =0;
+        do {
+            System.out.println("Digite um número válido: ");
+            selecao1 = sc.nextInt();
+            if (selecao1 == 1) {
+                cozinheiros.EntrarCozinheiro();
+                opcoes(); 
+                selecao1 = sc.nextInt();
+            }
+            else if (selecao1 == 2) {
+                //cozinheiros.teste();
+                cozinheiros.CadastroCozinheiro();
+                //opcoes(); 
+                //selecao1 = sc.nextInt();
+            }
+            else if (selecao1 == 3) {
+                cliente.EntrarCliente();
+                opcoes(); 
+                selecao1 = sc.nextInt();
+            }
+            else if (selecao1 == 4) {
+                cliente.CadastroCliente();
+                opcoes(); 
+                selecao1 = sc.nextInt();
+            }
+            else if (selecao1 == 5){
+                System.out.println("Você ficou offline");
+                return; 
+            }
+        } while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
+        
+
+        
         
         //pessoa = new Pessoa(nome, email, senha);
 
