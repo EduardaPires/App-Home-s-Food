@@ -58,6 +58,25 @@ public class Cozinheiros extends Pessoa{
         //chamará classe FazerPedido
     }
 
+    public String[] cozinheiro1(){
+       String nome = "Rafaella Ballerini";
+       String[] cardapio1 = {"Bolinho de linguiça com queijo- R$ 20,00", "Homus de Grão de Bico- R$ 14,00", "Falafel Libanês- R$ 15,00"};
+       return cardapio1;
+    }
+    public void cozinheiro2(){
+        String nome = "Freddie Mercury";
+        String[] cardapio2 = {" Porção de Pão de queijo(5 unid)- R$ 8,00 ", "Batata Cheaps- R$ 15,00", "Bolinhos de Arroz com Ricota(3 unid)- R$ 7,00", "Batata assada com calabresa e queijo- R$ 13,00"};
+    }
+
+    public void cozinheiro3(){
+        String nome= "Luke Skywalker";
+        String[] cardapio3 = {"Tropreiro de ervilha seca- R$ 20,00", "Palmito Gratinado- R$ 17,00"};
+    }
+    public void cozinheiro4(){
+        String nome= "Chihiro";
+        String[] cardapio4 ={"Missoshiru- R$14,00", "Guioza(4 unid)- R$ 12,50", "Sashimi- R$ 15,50", "Gohan com carne- R$ 17,50"};
+    }
+
     public void menu(){
         Pessoa pessoa=CadastroCozinheiro();
         System.out.println(pessoa.toString());

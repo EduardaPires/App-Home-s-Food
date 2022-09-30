@@ -3,8 +3,9 @@ public class Cliente extends Pessoa{
 
     Scanner sc = new Scanner(System.in);
 
+    private Cozinheiros cozinheiros;
     public Cliente(String nome, String user, int senha) {
-       // super(nome, user, senha);
+       
     }
 
     public Pessoa CadastroCliente() {
@@ -31,23 +32,30 @@ public class Cliente extends Pessoa{
         //     senha = sc.nextInt();
         // }
         menu();
+        exibirTelaCliente();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
+
+    public static void opcoesCozinheiros(){
+        System.out.println(" ======= OPÇÕES DE COZINHEIROS ======= ");
+        System.out.println("Escolha uma opção: ");
+        System.out.println("1. RAFAELLA BALLERINI");
+        System.out.println("2. FREDDIE MERCURY");
+        System.out.println("3. LUKE SKYWALKER");
+        System.out.println("4. CHIHIRO");
+        System.out.println("5. voltar para a tela inicial");
+    }
+
     public void exibirTelaCliente(){
 
         System.out.println("TELA INICIAL");
 
-        System.out.println("ESCOLHA UM COZINHEIRO: ");
-        //for (int i = 0; i < quantidadedecozinheiros.length; i++) {
-            //System.out.println("i - nomecozinheiro[i] ");
-        //}
+        opcoesCozinheiros();
         System.out.println("==========================");
         int cozinheiro = sc.nextInt();
         if (cozinheiro==1) {
-            //System.out.println(obj cozinheiro1); --> da classe pessoa 
-            //vai aparecer nome, 
-
+            Cozinheiros cozinheiros =
         } 
         else if (cozinheiro==2) {
         
