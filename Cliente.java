@@ -48,6 +48,8 @@ public class Cliente extends Pessoa{
     }
 
     public void exibirTelaCliente(){
+        String nome="", user="";
+        int senha=0;
 
         System.out.println("TELA INICIAL");
 
@@ -55,7 +57,9 @@ public class Cliente extends Pessoa{
         System.out.println("==========================");
         int cozinheiro = sc.nextInt();
         if (cozinheiro==1) {
-            Cozinheiros cozinheiros =
+            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+            cozinheiros.cozinheiro1();
+            //System.out.println(cardapio1[0]);
         } 
         else if (cozinheiro==2) {
         
