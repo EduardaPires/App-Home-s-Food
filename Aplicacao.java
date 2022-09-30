@@ -73,41 +73,29 @@ public class Aplicacao {
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
        //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
        //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-       opcoes(); 
-       int selecao1 =0;
+       //opcoes(); 
+       int op;
         do {
-            System.out.println("Digite um número válido: ");
-            selecao1 = sc.nextInt();
-            if (selecao1 == 1) {
+            opcoes(); 
+            op = sc.nextInt();sc.nextLine();
+            if (op == 1) {
                 cozinheiros.EntrarCozinheiro();
-                opcoes(); 
-                selecao1 = sc.nextInt();
             }
-            else if (selecao1 == 2) {
-                //cozinheiros.teste();
+            else if (op== 2) {
                 cozinheiros.CadastroCozinheiro();
-                //opcoes(); 
-                //selecao1 = sc.nextInt();
             }
-            else if (selecao1 == 3) {
+            else if (op == 3) {
                 cliente.EntrarCliente();
-                opcoes(); 
-                selecao1 = sc.nextInt();
             }
-            else if (selecao1 == 4) {
+            else if (op== 4) {
                 cliente.CadastroCliente();
-                opcoes(); 
-                selecao1 = sc.nextInt();
             }
-            else if (selecao1 == 5){
+            else if (op == 5){
                 System.out.println("Você ficou offline");
                 return; 
             }
-        } while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
-        
-
-        
-        
+        } while (op !=5);
+        //while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
         //pessoa = new Pessoa(nome, email, senha);
 
     }
