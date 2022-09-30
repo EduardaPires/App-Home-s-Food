@@ -3,8 +3,9 @@ public class Cliente extends Pessoa{
 
     Scanner sc = new Scanner(System.in);
 
+    private Cozinheiros cozinheiros;
     public Cliente(String nome, String user, int senha) {
-       // super(nome, user, senha);
+       
     }
 
     public Pessoa CadastroCliente() {
@@ -21,19 +22,59 @@ public class Cliente extends Pessoa{
     }
 
     public void EntrarCliente() {
-        Pessoa pessoa=CadastroCliente();
-        System.out.println("Digite seu nome de usuário: ");
-        String nome = sc.nextLine();
-        System.out.println("Digite sua senha: ");
-        int senha = sc.nextInt();
-        while (senha != pessoa.getSenha()) {
-            System.out.println("Senha incorreta!");
-            senha = sc.nextInt();
-        }
+        // Pessoa pessoa=CadastroCliente();
+        // System.out.println("Digite seu nome de usuário: ");
+        // String nome = sc.nextLine();
+        // System.out.println("Digite sua senha: ");
+        // int senha = sc.nextInt();
+        // while (senha != pessoa.getSenha()) {
+        //     System.out.println("Senha incorreta!");
+        //     senha = sc.nextInt();
+        // }
         menu();
+        exibirTelaCliente();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
+
+    public static void opcoesCozinheiros(){
+        System.out.println(" ======= OPÇÕES DE COZINHEIROS ======= ");
+        System.out.println("Escolha uma opção: ");
+        System.out.println("1. RAFAELLA BALLERINI");
+        System.out.println("2. FREDDIE MERCURY");
+        System.out.println("3. LUKE SKYWALKER");
+        System.out.println("4. CHIHIRO");
+        System.out.println("5. voltar para a tela inicial");
+    }
+
+    public void exibirTelaCliente(){
+
+        System.out.println("TELA INICIAL");
+
+        opcoesCozinheiros();
+        System.out.println("==========================");
+        int cozinheiro = sc.nextInt();
+        if (cozinheiro==1) {
+            Cozinheiros cozinheiros =
+        } 
+        else if (cozinheiro==2) {
+        
+        } 
+        else if (cozinheiro==3) {
+        
+        } 
+        else if (cozinheiro==4) {
+        
+        } 
+        else if (cozinheiro==5) {
+        
+        } 
+        else if (cozinheiro==6) {
+        }
+        
+        
+    }
+   
 
    /*public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

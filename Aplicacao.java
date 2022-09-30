@@ -52,6 +52,7 @@ public class Aplicacao {
 
     public static void opcoes(){
         System.out.println(" ======= HOME'S FOOD ======= ");
+        System.out.println("Escolha uma opção: ");
         System.out.println("1. Entrar como cozinheiro");
         System.out.println("2. Cadastrar como cozinheiro");
         System.out.println("3. Entrar como cliente");
