@@ -3,6 +3,7 @@ public class Pessoa {
     private String nome, user;
     //String email;
     private int senha;
+    
 
     //construtor(inicializar as variaveis de instancia)
     //public Pessoa(String nome, String user, int senha){
@@ -10,6 +11,12 @@ public class Pessoa {
        // this.email=email;
        // this.senha=senha;
     //}
+
+    public Pessoa(String nome, String user, int senha) {  //construtor de pessoa (cozinheiro ou cliente)
+        this.nome = nome;
+        this.user = user;
+        this.senha = senha;
+    }
 
     public String getNome() {
         return nome;
