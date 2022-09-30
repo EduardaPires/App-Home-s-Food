@@ -10,7 +10,7 @@ public class FazerPedido {
         this.avaliacao=avaliacao;
         this.mediaAvaliacao=mediaAvaliacao;
     }
-    
+
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
@@ -25,7 +25,7 @@ public class FazerPedido {
     }
     
     public void mostrarPedidos() {
-        for(int i = 0; i < pedidos.length; i++){
+        for(int i = 0; i < this.pedidos.length; i++){
             System.out.println(this.pedidos[i]);
         }
 
