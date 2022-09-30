@@ -21,19 +21,52 @@ public class Cliente extends Pessoa{
     }
 
     public void EntrarCliente() {
-        Pessoa pessoa=CadastroCliente();
-        System.out.println("Digite seu nome de usuário: ");
-        String nome = sc.nextLine();
-        System.out.println("Digite sua senha: ");
-        int senha = sc.nextInt();
-        while (senha != pessoa.getSenha()) {
-            System.out.println("Senha incorreta!");
-            senha = sc.nextInt();
-        }
+        // Pessoa pessoa=CadastroCliente();
+        // System.out.println("Digite seu nome de usuário: ");
+        // String nome = sc.nextLine();
+        // System.out.println("Digite sua senha: ");
+        // int senha = sc.nextInt();
+        // while (senha != pessoa.getSenha()) {
+        //     System.out.println("Senha incorreta!");
+        //     senha = sc.nextInt();
+        // }
         menu();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
+    public void exibirTelaCliente(){
+
+        System.out.println("TELA INICIAL");
+
+        System.out.println("ESCOLHA UM COZINHEIRO: ");
+        //for (int i = 0; i < quantidadedecozinheiros.length; i++) {
+            //System.out.println("i - nomecozinheiro[i] ");
+        //}
+        System.out.println("==========================");
+        int cozinheiro = sc.nextInt();
+        if (cozinheiro==1) {
+            //System.out.println(obj cozinheiro1); --> da classe pessoa 
+            //vai aparecer nome, 
+
+        } 
+        else if (cozinheiro==2) {
+        
+        } 
+        else if (cozinheiro==3) {
+        
+        } 
+        else if (cozinheiro==4) {
+        
+        } 
+        else if (cozinheiro==5) {
+        
+        } 
+        else if (cozinheiro==6) {
+        }
+        
+        
+    }
+   
 
    /*public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
