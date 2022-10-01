@@ -54,18 +54,16 @@ public class Cliente extends Pessoa{
         else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro2();   
-            //fazerpedido
+            
         
         } 
         else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro3();
-            //fazerpedido
         } 
         else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
-            //fazerpedido
         } 
         else if (op==5) {
             
