@@ -15,7 +15,7 @@ public class Cliente extends Pessoa{
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
-        System.out.println("Digite sua senha: ");
+        System.out.println("Digite uma senha numérica: ");
         senha = sc.nextInt();
         perfil.setSenha(senha);
         user = "Cliente";
@@ -41,7 +41,6 @@ public class Cliente extends Pessoa{
     public void exibirTelaCliente(){
         String nome="", user="";
         int senha=0;
-        System.out.println("TELA INICIAL");
         opcoesCozinheiros();
         System.out.println("==========================");
         int op = sc.nextInt();
@@ -64,30 +63,11 @@ public class Cliente extends Pessoa{
             cozinheiros.cozinheiro4();
         } 
         else if (op==5) {
-        
+            
         }
     
         
     }
-   
-
-   /*public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Pessoa perfil = new Pessoa();
-        System.out.println("Digite seu nome de usuário: ");
-        String nome = sc.nextLine();
-        perfil.setNome(nome);
-        System.out.println("Digite sua senha: ");
-        int senha = sc.nextInt();
-        perfil.setSenha(senha);
-        String user = "Cliente";
-        perfil.setUser(user);
-        System.out.println(perfil.toString());
-        int password = 123;
-        if (perfil.getSenha() == password) {
-            System.out.println("a senha já existe");
-        }
-    }*/
 
     public void menu(){
         Pessoa pessoa=CadastroCliente();

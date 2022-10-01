@@ -51,6 +51,7 @@ public class Aplicacao {
     }
 
     public static void opcoes(){
+        System.out.println("");
         System.out.println(" ======= HOME'S FOOD ======= ");
         System.out.println("Escolha uma opção: ");
         System.out.println("1. Entrar como cozinheiro");
@@ -62,17 +63,26 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String nome="", user="";
-        int senha=0;
-        Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
-        Cliente cliente = new Cliente(nome, user, senha);
+        exibiropcoes();
         //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
        //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
        //sysout opções de entrar como cozinheiro e cliente-> no cozinheiro, opção de mostrar pedidos
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
        //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
        //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-       int op;
+       
+        //while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
+        //pessoa = new Pessoa(nome, email, senha);
+
+    }
+
+    public static void exibiropcoes() {
+        Scanner sc = new Scanner(System.in);
+        String nome="", user="";
+        int senha=0;
+        Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+        Cliente cliente = new Cliente(nome, user, senha);
+        int op;
         do {
             opcoes(); 
             op = sc.nextInt();sc.nextLine();
@@ -93,9 +103,6 @@ public class Aplicacao {
                 return; 
             }
         } while (op !=5);
-        //while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
-        //pessoa = new Pessoa(nome, email, senha);
-
     }
 
 
