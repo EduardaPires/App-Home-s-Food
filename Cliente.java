@@ -47,20 +47,24 @@ public class Cliente extends Pessoa{
         if (op==1) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro1();
+            //fazerpedido
             //System.out.println(cardapio1[0]);
         } 
         else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro2();   
+            //fazerpedido
         
         } 
         else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro3();
+            //fazerpedido
         } 
         else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
+            //fazerpedido
         } 
         else if (op==5) {
             
@@ -68,6 +72,7 @@ public class Cliente extends Pessoa{
     
         
     }
+
 
     public void menu(){
         Pessoa pessoa=CadastroCliente();
