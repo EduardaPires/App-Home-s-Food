@@ -48,12 +48,13 @@ public class FazerPedido {
         return this.mediaAvaliacao;
     }
 
-    public void Avaliacao() {
-        System.out.println("Pedido entregue!");
-        System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
-        int estrelas = sc.nextInt();
-        setAvaliacao(estrelas);
-
+    public void EscolhadoItemCardapio(String[] cardapio, int indescolhido){
+        int i;
+        for(i=0; i< cardapio.length;i++){
+            if(indescolhido==i+1){
+                String pedido= cardapio[i];
+            }
+        }
     }
 
 }
