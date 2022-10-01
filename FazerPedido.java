@@ -1,4 +1,7 @@
+import java.util.Scanner;
+
 public class FazerPedido {
+    Scanner sc = new Scanner(System.in);
     private int quantPedidos; 
     private String[] pedidos; //o tamanho será a quantia de pedidos
     private int avaliacao; 
@@ -24,13 +27,6 @@ public class FazerPedido {
         this.quantPedidos = quantPedidos;
     }
     
-    public void mostrarPedidos() {
-        for(int i = 0; i < this.pedidos.length; i++){
-            System.out.println(this.pedidos[i]);
-        }
-
-    }
-    
     public String[] selecionarPedidos() {
         //mostraPedidos()
         return null;
@@ -50,6 +46,14 @@ public class FazerPedido {
 
     public float getMediaAvaliacao(){
         return this.mediaAvaliacao;
+    }
+
+    public void Avaliacao() {
+        System.out.println("Pedido entregue!");
+        System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
+        int estrelas = sc.nextInt();
+        setAvaliacao(estrelas);
+
     }
 
 }
