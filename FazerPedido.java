@@ -52,4 +52,13 @@ public class FazerPedido {
         return this.mediaAvaliacao;
     }
 
+    public void EscolhadoItemCardapio(String[] cardapio, int indescolhido){
+        int i;
+        for(i=0; i< cardapio.length;i++){
+            if(indescolhido==i+1){
+                String pedido= cardapio[i];
+            }
+        }
+    }
+
 }
