@@ -78,7 +78,7 @@ public class Cozinheiros extends Pessoa{
              System.out.println(cardapio2[i]);  
         }
         System.out.println("ESCOLHA O SEU PEDIDO: ");
-    }
+    }//
     public void cozinheiro3(){
         String nome= "Luke Skywalker";
         String[] cardapio3 = {"Tropreiro de ervilha seca- R$ 20,00", "Palmito Gratinado- R$ 17,00"};
