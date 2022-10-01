@@ -153,6 +153,7 @@ public class Cozinheiros extends Pessoa{
         System.out.println(" ======= Cardápio======= ");
         for (int i = 0; i < cardapiox.length; i++) {
              System.out.println(cardapiox[i]);
+
         }
         System.out.println("ESCOLHA O SEU PEDIDO: ");
         indescolhido = sc.nextInt();

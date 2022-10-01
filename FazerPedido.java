@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class FazerPedido {
-    private int quantPedidos; 
+    Scanner sc = new Scanner(System.in);
+    private int quantPedidos, somaAvaliacao=0, quantAvaliacoes=0; 
     private String[] pedidos; //o tamanho será a quantia de pedidos
     private int avaliacao; 
     private float mediaAvaliacao;//fazer calculo de média, só vai adiconar, não aparece a avaliação individual; e será feita após o pedido (perguntando se foi recebido)
@@ -16,21 +19,12 @@ public class FazerPedido {
     public void setAvaliacao(int avaliacao) {
         this.avaliacao = avaliacao;
     }
-    public void setMediaAvaliacao(int mediaAvaliacao) {
-        this.mediaAvaliacao = mediaAvaliacao;
-    }
+
     public void setPedidos(String[] pedidos) {
         this.pedidos = pedidos;
     }
     public void setQuantPedidos(int quantPedidos) {
         this.quantPedidos = quantPedidos;
-    }
-    
-    public void mostrarPedidos() {
-        for(int i = 0; i < this.pedidos.length; i++){
-            System.out.println(this.pedidos[i]);
-        }
-
     }
     
     public String[] selecionarPedidos() {
@@ -64,5 +58,34 @@ public class FazerPedido {
         return pedido;
     }
 
+    
+
+
+
+
+
+
+
+
+    public void setMediaAvaliacao(int estrelas) {
+        this.somaAvaliacao = somaAvaliacao + estrelas;
+        this.mediaAvaliacao = (somaAvaliacao)/quantAvaliacoes;
+    }
+
+    public void Avaliacao() {
+        System.out.println("Pedido entregue!");
+        System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
+        int estrelas = sc.nextInt();
+        this.quantAvaliacoes++;
+        setAvaliacao(estrelas);
+        setMediaAvaliacao(estrelas);
+        System.out.println("Obrigada por dar ");
+        for (int i = 0; i < estrelas; i++) {
+            System.out.print("★");
+        }
+        System.out.println(" estrelas!");
+        System.out.println("==========");
+        //voltar a tela inicial
+    }
 
 }
