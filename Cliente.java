@@ -55,27 +55,29 @@ public class Cliente extends Pessoa{
 
         opcoesCozinheiros();
         System.out.println("==========================");
-        int cozinheiro = sc.nextInt();
-        if (cozinheiro==1) {
+        int op = sc.nextInt();
+        if (op==1) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro1();
             //System.out.println(cardapio1[0]);
         } 
-        else if (cozinheiro==2) {
+        else if (op==2) {
+            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+            cozinheiros.cozinheiro2();   
         
         } 
-        else if (cozinheiro==3) {
-        
+        else if (op==3) {
+            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+            cozinheiros.cozinheiro3();
         } 
-        else if (cozinheiro==4) {
-        
+        else if (op==4) {
+            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+            cozinheiros.cozinheiro4();
         } 
-        else if (cozinheiro==5) {
+        else if (op==5) {
         
-        } 
-        else if (cozinheiro==6) {
         }
-        
+    
         
     }
    

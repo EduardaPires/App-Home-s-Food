@@ -72,14 +72,31 @@ public class Cozinheiros extends Pessoa{
     public void cozinheiro2(){
         String nome = "Freddie Mercury";
         String[] cardapio2 = {" Porção de Pão de queijo(5 unid)- R$ 8,00 ", "Batata Cheaps- R$ 15,00", "Bolinhos de Arroz com Ricota(3 unid)- R$ 7,00", "Batata assada com calabresa e queijo- R$ 13,00"};
+        System.out.println(" ======= Cardápio======= ");
+        for (int i = 0; i < cardapio2.length; i++) {
+             System.out.println(cardapio2[i]);  
+        }
+        System.out.println("ESCOLHA O SEU PEDIDO: ");
     }
     public void cozinheiro3(){
         String nome= "Luke Skywalker";
         String[] cardapio3 = {"Tropreiro de ervilha seca- R$ 20,00", "Palmito Gratinado- R$ 17,00"};
+        System.out.println(" ======= Cardápio======= ");
+        for (int i = 0; i < cardapio3.length; i++) {
+             System.out.println(cardapio3[i]);
+             
+        }
+        System.out.println("ESCOLHA O SEU PEDIDO: ");
     }
     public void cozinheiro4(){
         String nome= "Chihiro";
         String[] cardapio4 ={"Missoshiru- R$14,00", "Guioza(4 unid)- R$ 12,50", "Sashimi- R$ 15,50", "Gohan com carne- R$ 17,50"};
+        System.out.println(" ======= Cardápio======= ");
+        for (int i = 0; i < cardapio4.length; i++) {
+             System.out.println(cardapio4[i]);
+             
+        }
+        System.out.println("ESCOLHA O SEU PEDIDO: ");
     }
 
     public void menu(){
