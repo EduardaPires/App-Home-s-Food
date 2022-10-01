@@ -2,10 +2,11 @@ import java.util.Scanner;
 public class Cliente extends Pessoa{  
 
     Scanner sc = new Scanner(System.in);
-
+    FazerPedido pedido;
     private Cozinheiros cozinheiros;
     public Cliente(String nome, String user, int senha) {
        super(nome, user, senha);
+       this.pedido = pedido;
     }
 
     public Pessoa CadastroCliente() {
@@ -47,6 +48,7 @@ public class Cliente extends Pessoa{
         if (op==1) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro1();
+            
             //System.out.println(cardapio1[0]);
         } 
         else if (op==2) {
@@ -61,6 +63,7 @@ public class Cliente extends Pessoa{
         else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
+            //fazerpedido -> PASSA UM INT 
         } 
         else if (op==5) {
             
