@@ -9,20 +9,22 @@ public class Cozinheiros extends Pessoa{
 
     
     public Cozinheiros(String nome, String user, int senha) {
-        //super(nome, user, senha);
+        super(nome, user, senha);
         this.cardapio = new String[4];
         this.avaliacao=avaliacao;
     }
 
     public Pessoa CadastroCozinheiro() {
-        Pessoa perfil = new Pessoa(); //em vez de super usar perfil
+        String nome="", user="";
+        int senha=0;
+        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
-        String nome = sc.nextLine();
+        nome = sc.nextLine();
         perfil.setNome(nome);
         System.out.println("Digite sua senha: ");
-        int senha = sc.nextInt();
+        senha = sc.nextInt();
         perfil.setSenha(senha);
-        String user = "Cozinheiro";
+        user = "Cozinheiro";
         perfil.setUser(user);
         //Cardapio();
         System.out.println("Quantos pratos terá em seu cardápio? ");
@@ -64,7 +66,6 @@ public class Cozinheiros extends Pessoa{
        System.out.println(" ======= Cardápio======= ");
        for (int i = 0; i < cardapio1.length; i++) {
             System.out.println(cardapio1[i]);
-            
        }
        System.out.println("ESCOLHA O SEU PEDIDO: ");
        //return cardapio1;
@@ -72,6 +73,7 @@ public class Cozinheiros extends Pessoa{
     public void cozinheiro2(){
         String nome = "Freddie Mercury";
         String[] cardapio2 = {" Porção de Pão de queijo(5 unid)- R$ 8,00 ", "Batata Cheaps- R$ 15,00", "Bolinhos de Arroz com Ricota(3 unid)- R$ 7,00", "Batata assada com calabresa e queijo- R$ 13,00"};
+    
     }
     public void cozinheiro3(){
         String nome= "Luke Skywalker";
