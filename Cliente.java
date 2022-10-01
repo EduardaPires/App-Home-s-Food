@@ -44,35 +44,50 @@ public class Cliente extends Pessoa{
         System.out.println("TELA INICIAL");
         opcoesCozinheiros();
         System.out.println("==========================");
-        int cozinheiro = sc.nextInt();
-        if (cozinheiro==1) {
+        int op = sc.nextInt();
+        if (op==1) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro1();
             //System.out.println(cardapio1[0]);
         } 
-        else if (cozinheiro==2) {
+        else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
-            cozinheiros.cozinheiro2();
+            cozinheiros.cozinheiro2();   
+        
         } 
-        else if (cozinheiro==3) {
+        else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro3();
         } 
-        else if (cozinheiro==4) {
+        else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
         } 
-        else if (cozinheiro==5) {
-            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
-           // cozinheiros.cozinheiro5();
-        } 
-        else if (cozinheiro==6) {
-            Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
-          //  cozinheiros.cozinheiro6();
-        }
+        else if (op==5) {
         
+        }
+    
         
     }
+   
+
+   /*public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Pessoa perfil = new Pessoa();
+        System.out.println("Digite seu nome de usuário: ");
+        String nome = sc.nextLine();
+        perfil.setNome(nome);
+        System.out.println("Digite sua senha: ");
+        int senha = sc.nextInt();
+        perfil.setSenha(senha);
+        String user = "Cliente";
+        perfil.setUser(user);
+        System.out.println(perfil.toString());
+        int password = 123;
+        if (perfil.getSenha() == password) {
+            System.out.println("a senha já existe");
+        }
+    }*/
 
     public void menu(){
         Pessoa pessoa=CadastroCliente();
