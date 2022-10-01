@@ -57,4 +57,16 @@ public class FazerPedido {
         }
     }
 
+    
+
+
+
+
+    public void Avaliacao() {
+        System.out.println("Pedido entregue!");
+        System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
+        int estrelas = sc.nextInt();
+        setAvaliacao(estrelas);
+    }
+
 }
