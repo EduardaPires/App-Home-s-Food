@@ -73,6 +73,18 @@ public class Cozinheiros extends Pessoa{
         //chamará classe FazerPedido
     }
 
+    public void opcoesTelaCozinheiros(){
+        System.out.println("Escolha uma opção:");
+        System.out.println("1- Visualizar quantos pedidos foram realizados");
+        System.out.println("2- Visualizar a media de avaliações");
+        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
+    }
+
+    //public void exibirTelaCozinheiro(){
+        //String nome="", user="";
+        //int senha=0;
+    //}
+
     public void cozinheiro1(){
        String nome = "Rafaella Ballerini";
        String[] cardapio1 = {"Bolinho de linguiça com queijo- R$ 20,00", "Homus de Grão de Bico- R$ 14,00", "Falafel Libanês- R$ 15,00"};
