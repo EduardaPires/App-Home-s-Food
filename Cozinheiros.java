@@ -44,6 +44,7 @@ public class Cozinheiros extends Pessoa{
              System.out.println((i+1)+ ": ");
              cardapio[i] = sc.nextLine();
          }
+        System.out.println(" ");
         System.out.println(perfil.toString());
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             System.out.println((i+1)+ ": " + cardapio[i]);
@@ -64,8 +65,18 @@ public class Cozinheiros extends Pessoa{
         perfil.setSenha(senha);
         user = "Cozinheiro";
         perfil.setUser(user);
+        System.out.println(" ");
         System.out.println(perfil.toString());
         exibirCardapio();
+        System.out.println("\u001b[1mSuas estrelas: \u001b[m ");
+        float avaliacao = pedido.getMediaAvaliacao();
+        if (avaliacao == 0)
+        {
+            System.out.println("você ainda não recebeu nenhuma avaliação");
+        }
+        else {
+            System.out.println(avaliacao + " estrelas ");
+        }
         exibirPedidosFeitos();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
@@ -92,7 +103,8 @@ public class Cozinheiros extends Pessoa{
         Cardapios(cardapio4);
     }
     public void exibirPedidosFeitos(){
-            System.out.println(getItemEscolhidoDoCardapio());
+        System.out.println("\u001b[1mPedidos: \u001b[m ");
+        System.out.println(getItemEscolhidoDoCardapio());
     }
 
     public float getAvaliacao() {
@@ -111,6 +123,9 @@ public class Cozinheiros extends Pessoa{
     }
     public String getItemEscolhidoDoCardapio(){
        String itemEscolhido= pedido.EscolhadoItemCardapio(cardapio, indescolhido);
+       if (itemEscolhido == null){
+            return "Você ainda não recebeu um pedido";
+       }
         return itemEscolhido; 
     }
 
