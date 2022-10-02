@@ -4,22 +4,6 @@ public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
 
-
-
-    public void exibirTelaCozinheiro(){
-        //chamar metodo exibirCardapio
-        System.out.println("Deseja adicionar algo no seu cardápio?");
-        String resposta = sc.nextLine();
-        if (resposta == "sim") {
-            //chamar método addOpcnoCardapio
-        }
-        System.out.println("==========================");
-        System.out.println("Você tem um x pedidos:");
-        //for (int i = 0; i < tamanhoCardapio.length; i++) {
-            //sysout("item[i], quantidade: [i]");
-        //}
-    }
-
     public static void opcoes(){
         System.out.println("");
         System.out.println(" ======= HOME'S FOOD ======= ");

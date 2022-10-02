@@ -8,7 +8,7 @@ public class FazerPedido {
     private float mediaAvaliacao;//fazer calculo de média, só vai adiconar, não aparece a avaliação individual; e será feita após o pedido (perguntando se foi recebido)
     private String pedido;
 
-    public FazerPedido(int quantPedidos, String pedidos, int avaliacao, float mediaAvaliacao, String pedido){
+    public FazerPedido(){
         this.quantPedidos=quantPedidos;
         this.pedidos = new String[quantPedidos];
         this.avaliacao=avaliacao;
