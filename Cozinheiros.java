@@ -64,8 +64,9 @@ public class Cozinheiros extends Pessoa{
         perfil.setSenha(senha);
         user = "Cozinheiro";
         perfil.setUser(user);
-      
-        menu();
+        System.out.println(perfil.toString());
+        exibirCardapio();
+        exibirPedidosFeitos();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
@@ -89,13 +90,6 @@ public class Cozinheiros extends Pessoa{
         String nome= "Chihiro";
         String[] cardapio4 ={"Missoshiru- R$14,00", "Guioza(4 unid)- R$ 12,50", "Sashimi- R$ 15,50", "Gohan com carne- R$ 17,50"};
         Cardapios(cardapio4);
-    }
-
-    public void menu(){
-        Pessoa pessoa=CadastroCozinheiro();
-        System.out.println(pessoa.toString());
-        exibirCardapio();
-        exibirPedidosFeitos();
     }
     public void exibirPedidosFeitos(){
             System.out.println(getItemEscolhidoDoCardapio());

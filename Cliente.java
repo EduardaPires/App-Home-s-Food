@@ -68,10 +68,7 @@ public class Cliente extends Pessoa{
         else if (op==5) {
             
         }
-    
-        
     }
-
 
     public void menu(){
         Pessoa pessoa=CadastroCliente();
