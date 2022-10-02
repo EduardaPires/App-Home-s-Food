@@ -20,36 +20,6 @@ public class Aplicacao {
         //}
     }
 
-    public void exibirTelaCliente(){
-        System.out.println("ESCOLHA UM COZINHEIRO: ");
-        //for (int i = 0; i < quantidadedecozinheiros.length; i++) {
-            //System.out.println("i - nomecozinheiro[i] ");
-        //}
-        System.out.println("==========================");
-        int cozinheiro = sc.nextInt();
-        if (cozinheiro==1) {
-            //System.out.println(obj cozinheiro1); --> da classe pessoa 
-            //vai aparecer nome, 
-
-        } 
-        else if (cozinheiro==2) {
-        
-        } 
-        else if (cozinheiro==3) {
-        
-        } 
-        else if (cozinheiro==4) {
-        
-        } 
-        else if (cozinheiro==5) {
-        
-        } 
-        else if (cozinheiro==6) {
-        }
-        
-        
-    }
-
     public static void opcoes(){
         System.out.println("");
         System.out.println(" ======= HOME'S FOOD ======= ");

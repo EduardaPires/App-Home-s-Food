@@ -1,17 +1,22 @@
 import java.util.Scanner;
 
 public class Cozinheiros extends Pessoa{
+    
     Scanner sc = new Scanner(System.in);
+    private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
     private float mediaAvaliacao;//media das avaliacoes
     private int quantidadeDeAvaliacoes;
+    private int indescolhido;
 
     
     public Cozinheiros(String nome, String user, int senha) {
         super(nome, user, senha);
         this.cardapio = new String[4];
         this.avaliacao=avaliacao;
+        this.pedido = pedido;
+        this.indescolhido = indescolhido;
     }
 
     public Pessoa CadastroCozinheiro() {
@@ -86,6 +91,10 @@ public class Cozinheiros extends Pessoa{
         Pessoa pessoa=CadastroCozinheiro();
         System.out.println(pessoa.toString());
         exibirCardapio();
+        exibirPedidosFeitos();
+    }
+    public void exibirPedidosFeitos(){
+            System.out.println(getItemEscolhidoDoCardapio());
     }
 
     public float getAvaliacao() {
@@ -101,6 +110,10 @@ public class Cozinheiros extends Pessoa{
  
     public int getQuantidadeDeAvaliacoes() {
         return quantidadeDeAvaliacoes;
+    }
+    public String getItemEscolhidoDoCardapio(){
+       String itemEscolhido= pedido.EscolhadoItemCardapio(cardapio, indescolhido);
+        return itemEscolhido; 
     }
 
     public void setAvaliacao(float avaliacao) {
@@ -143,10 +156,16 @@ public class Cozinheiros extends Pessoa{
 
         }
         System.out.println("ESCOLHA O SEU PEDIDO: ");
+        indescolhido = sc.nextInt();
+        String comida = pedido.EscolhadoItemCardapio(cardapiox, indescolhido);
+        System.out.println("Você escolheu " + comida);
+        
     }
 
    // public void adcionarOpcaoNoCardapio (String prato){
    //     this.cardapio[quantidadeDeCardapios] = prato;
    //     quantidadeDeCardapios++;
   //  }
+
+   
 }
