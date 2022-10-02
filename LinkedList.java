@@ -21,7 +21,7 @@ public class LinkedList<T> {
             while(aux.getNext() != null){
                 aux = aux.getNext();
             }
-            aux.setValue(valor);
+            aux.setNext(valor);
         }
 
     }
