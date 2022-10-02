@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
+
+    LinkedList 
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
@@ -37,7 +39,7 @@ public class Cozinheiros extends Pessoa{
         int quantidadeDeCardapios = sc.nextInt();
         //setQuantidadeDeCardapios(quantidadeDeCardapios);
         setCardapio(cardapio, quantidadeDeCardapios);
-        System.out.println("Seus pratos: ");
+        System.out.println("Digite seus pratos: ");
         cardapio[0] = sc.nextLine();
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             // System.out.println("coloque um pratinho");
@@ -47,7 +49,7 @@ public class Cozinheiros extends Pessoa{
         System.out.println(" ");
         System.out.println(perfil.toString());
         for (int i = 0; i < quantidadeDeCardapios; i++) {
-            System.out.println((i+1)+ ": " + cardapio[i]);
+            System.out.println("Prato "+(i+1)+ ": " + cardapio[i]);
         }
         return perfil;
     }
@@ -80,6 +82,34 @@ public class Cozinheiros extends Pessoa{
         exibirPedidosFeitos();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
+    }
+
+    public void opcoesTelaCozinheiros(){
+        System.out.println("Escolha uma opção:");
+        System.out.println("1- Visualizar quantos pedidos foram realizados");
+        System.out.println("2- Visualizar a media de avaliações");
+        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
+        System.out.println("4- sair");
+    }
+
+    public void exibirTelaCozinheiro(){
+        String nome="", user="";
+        int senha=0;
+        opcoesTelaCozinheiros();
+        System.out.println("==========================");
+        int op = sc.nextInt();
+          if(op==1){
+
+          }
+          else if(op==2){
+
+          }
+          else if(op==3){
+
+          }
+          else if(op==4){
+            
+          }
     }
 
     public void cozinheiro1(){

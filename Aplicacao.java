@@ -17,6 +17,9 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        LinkedList <Cozinheiros> cozinheiros = new LinkedList();
+        LinkedList <Cliente> clientes = new LinkedList();
+
         exibiropcoes();
         //System.out.println("\u001b[1m Pedido entregue! \u001b[m");
         /*System.out.println("\u001b[37m \u001b[44m Pedido entregue \u001b[m");
@@ -51,6 +54,7 @@ public class Aplicacao {
             }
             else if (op== 2) {
                 cozinheiros.CadastroCozinheiro();
+
             }
             else if (op == 3) {
                 cliente.EntrarCliente();
