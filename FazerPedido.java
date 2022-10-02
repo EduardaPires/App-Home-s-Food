@@ -56,6 +56,20 @@ public class FazerPedido {
             }
         }
         return pedido;
+        //obs-> só pode quando pedido for feito antes (?)
+    }
+
+    public void receberPedidos(){
+        System.out.println(" ==================== ");
+        System.out.println("PEDIDOS: ");
+        if (this.pedido == null) {
+            System.out.println("Você ainda não recebeu nenhum pedido.");
+            return;
+        }
+        System.out.println("Você recebeu x pedidos."); //fazer contador sempre q for feito um pedido pro mesmo cozinheiro??? contador pra cada um ent
+        //renda pros cozinheiros, se sim fazer string de int e var pra renda total (sempre somando ao fazer novo pedido)
+        //tá... e depois?
+        System.out.println("Pedido recebido! Você recebeu uma avaliação de " + estrelas + "!");
     }
 
     public void setMediaAvaliacao(int estrelas) {
