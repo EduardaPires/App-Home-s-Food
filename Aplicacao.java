@@ -4,22 +4,6 @@ public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
 
-
-
-    public void exibirTelaCozinheiro(){
-        //chamar metodo exibirCardapio
-        System.out.println("Deseja adicionar algo no seu cardápio?");
-        String resposta = sc.nextLine();
-        if (resposta == "sim") {
-            //chamar método addOpcnoCardapio
-        }
-        System.out.println("==========================");
-        System.out.println("Você tem um x pedidos:");
-        //for (int i = 0; i < tamanhoCardapio.length; i++) {
-            //sysout("item[i], quantidade: [i]");
-        //}
-    }
-
     public static void opcoes(){
         System.out.println("");
         System.out.println(" ======= HOME'S FOOD ======= ");
@@ -34,15 +18,21 @@ public class Aplicacao {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         exibiropcoes();
+        //System.out.println("\u001b[1m Pedido entregue! \u001b[m");
+        /*System.out.println("\u001b[37m \u001b[44m Pedido entregue \u001b[m");
+       System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
+       int estrelas = sc.nextInt();
+       //this.quantAvaliacoes++;
+       //setAvaliacao(estrelas);
+       //setMediaAvaliacao(estrelas);
+       System.out.println("Obrigada por dar " + estrelas + " estrelas!");
+       System.out.println(" ==================== ");*/
         //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
        //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
        //sysout opções de entrar como cozinheiro e cliente-> no cozinheiro, opção de mostrar pedidos
        //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
        //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
        //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-       
-        //while (selecao1 == 1 && selecao1 == 2 && selecao1 == 3 && selecao1 == 4 && selecao1 == 5);
-        //pessoa = new Pessoa(nome, email, senha);
 
     }
 

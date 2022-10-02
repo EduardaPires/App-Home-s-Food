@@ -15,7 +15,7 @@ public class Cozinheiros extends Pessoa{
         super(nome, user, senha);
         this.cardapio = new String[4];
         this.avaliacao=avaliacao;
-        this.pedido = pedido;
+        this.pedido = new FazerPedido();
         this.indescolhido = indescolhido;
     }
 
@@ -160,9 +160,10 @@ public class Cozinheiros extends Pessoa{
 
         }
         System.out.println("ESCOLHA O SEU PEDIDO: ");
-        indescolhido = sc.nextInt();
+        indescolhido = sc.nextInt(); //nullpointer
         String comida = pedido.EscolhadoItemCardapio(cardapiox, indescolhido);
         System.out.println("Você escolheu " + comida);
+        pedido.Avaliacao();
         
     }
 
@@ -170,6 +171,21 @@ public class Cozinheiros extends Pessoa{
    //     this.cardapio[quantidadeDeCardapios] = prato;
    //     quantidadeDeCardapios++;
   //  }
+
+  
+    /*public void exibirTelaCozinheiro(){
+        //chamar metodo exibirCardapio
+        System.out.println("Deseja adicionar algo no seu cardápio?");
+        String resposta = sc.nextLine();
+        if (resposta == "sim") {
+            //chamar método addOpcnoCardapio
+        }
+        System.out.println("==========================");
+        System.out.println("Você tem um x pedidos:");
+        //for (int i = 0; i < tamanhoCardapio.length; i++) {
+            //sysout("item[i], quantidade: [i]");
+        //}
+    }*/
 
    
 }
