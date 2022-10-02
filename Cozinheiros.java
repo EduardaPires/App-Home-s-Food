@@ -4,7 +4,7 @@ public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
 
-    LinkedList 
+    
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
