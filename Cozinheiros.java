@@ -150,7 +150,7 @@ public class Cozinheiros extends Pessoa{
     }
 
     public void Cardapios(String[] cardapiox) {
-        System.out.println(" ======= Cardápio======= ");
+        System.out.println(" ======= Cardápio ======= ");
         for (int i = 0; i < cardapiox.length; i++) {
              System.out.println(cardapiox[i]);
 
