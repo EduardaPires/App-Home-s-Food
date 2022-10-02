@@ -58,33 +58,23 @@ public class FazerPedido {
         return pedido;
     }
 
-    
-
-
-
-
-
-
-
-
     public void setMediaAvaliacao(int estrelas) {
         this.somaAvaliacao = somaAvaliacao + estrelas;
         this.mediaAvaliacao = (somaAvaliacao)/quantAvaliacoes;
+        //aparecer para o cliente e cozinheiro (mas aí só a respeito da comida dele)
     }
 
     public void Avaliacao() {
-        System.out.println("Pedido entregue!");
+        System.out.println("O pedido está a caminho...");
+        System.out.println(". . . . . . . . . . . . . . . . . . . . . .");
+        System.out.println("\u001b[37m \u001b[44m Seu pedido foi entregue! \u001b[m");
         System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
         int estrelas = sc.nextInt();
         this.quantAvaliacoes++;
         setAvaliacao(estrelas);
         setMediaAvaliacao(estrelas);
-        System.out.println("Obrigada por dar ");
-        for (int i = 0; i < estrelas; i++) {
-            System.out.print("★");
-        }
-        System.out.println(" estrelas!");
-        System.out.println("==========");
+        System.out.println("\u001b[1m Obrigada por dar "+estrelas+" estrelas! \u001b[m");
+        System.out.println("\u001b[1m ============================== \u001b[m ");
         //voltar a tela inicial
     }
 
