@@ -37,7 +37,7 @@ public class Cozinheiros extends Pessoa{
         int quantidadeDeCardapios = sc.nextInt();
         //setQuantidadeDeCardapios(quantidadeDeCardapios);
         setCardapio(cardapio, quantidadeDeCardapios);
-        System.out.println("Seus pratos: ");
+        System.out.println("Digite seus pratos: ");
         cardapio[0] = sc.nextLine();
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             // System.out.println("coloque um pratinho");
@@ -46,7 +46,7 @@ public class Cozinheiros extends Pessoa{
          }
         System.out.println(perfil.toString());
         for (int i = 0; i < quantidadeDeCardapios; i++) {
-            System.out.println((i+1)+ ": " + cardapio[i]);
+            System.out.println("Prato "+(i+1)+ ": " + cardapio[i]);
         }
         return perfil;
     }
