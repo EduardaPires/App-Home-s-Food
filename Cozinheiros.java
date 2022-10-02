@@ -78,12 +78,28 @@ public class Cozinheiros extends Pessoa{
         System.out.println("1- Visualizar quantos pedidos foram realizados");
         System.out.println("2- Visualizar a media de avaliações");
         System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
+        System.out.println("4- sair");
     }
 
-    //public void exibirTelaCozinheiro(){
-        //String nome="", user="";
-        //int senha=0;
-    //}
+    public void exibirTelaCozinheiro(){
+        String nome="", user="";
+        int senha=0;
+        opcoesTelaCozinheiros();
+        System.out.println("==========================");
+        int op = sc.nextInt();
+          if(op==1){
+
+          }
+          else if(op==2){
+
+          }
+          else if(op==3){
+
+          }
+          else if(op==4){
+            
+          }
+    }
 
     public void cozinheiro1(){
        String nome = "Rafaella Ballerini";
