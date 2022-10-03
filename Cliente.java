@@ -42,6 +42,7 @@ public class Cliente extends Pessoa{
     public void exibirTelaCliente(){
         String nome="", user="";
         int senha=0;
+        int qtd=0;
         opcoesCozinheiros();
         System.out.println("==========================");
         int op = sc.nextInt();
@@ -50,20 +51,23 @@ public class Cliente extends Pessoa{
             cozinheiros.cozinheiro1();
             //fazerpedido
             //System.out.println(cardapio1[0]);
+            qtd++;
         } 
         else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro2();   
-            
+            qtd++;
         
         } 
         else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro3();
+            qtd++;
         } 
         else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
+            qtd++;
         } 
         else if (op==5) {
             

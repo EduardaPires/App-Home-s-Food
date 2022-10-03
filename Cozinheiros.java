@@ -4,7 +4,6 @@ public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
 
-    LinkedList 
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
@@ -76,9 +75,9 @@ public class Cozinheiros extends Pessoa{
     public void opcoesTelaCozinheiros(){
         System.out.println("Escolha uma opção:");
         System.out.println("1- Visualizar quantos pedidos foram realizados");
-        System.out.println("2- Visualizar a media de avaliações");
-        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
-        System.out.println("4- sair");
+        //System.out.println("2- ");
+        System.out.println("2- Visualizar qual o valor total ganho com a venda dos pratos");
+        System.out.println("3- sair");
     }
 
     public void exibirTelaCozinheiro(){
@@ -88,7 +87,8 @@ public class Cozinheiros extends Pessoa{
         System.out.println("==========================");
         int op = sc.nextInt();
           if(op==1){
-
+            int contador=0;
+            
           }
           else if(op==2){
 
@@ -97,7 +97,7 @@ public class Cozinheiros extends Pessoa{
 
           }
           else if(op==4){
-            
+
           }
     }
 
