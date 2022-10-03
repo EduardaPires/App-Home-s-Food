@@ -13,7 +13,7 @@ public class Cliente extends Pessoa{
     }
 
     public Pessoa CadastroCliente() {
-         //em vez de super usar perfil
+        //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
@@ -25,7 +25,6 @@ public class Cliente extends Pessoa{
         return perfil;
     }
 
-    
     public int CompareTo(Cliente cliente){
         int resultado = this.getNome().compareTo(cliente.getNome());
         return resultado;

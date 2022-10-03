@@ -3,7 +3,10 @@ import java.util.Scanner;
 public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
-    
+
+    String nome="", user="";
+    int senha=0;
+    Pessoa perfil = new Pessoa(nome, user, senha);
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
@@ -21,16 +24,13 @@ public class Cozinheiros extends Pessoa{
     }
 
     public Pessoa CadastroCozinheiro() {
-        String nome="", user="";
-        int senha=0;
-        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
+        //Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
         System.out.println("Digite uma senha numérica: ");
-        //exceção de int 
         senha = sc.nextInt();
-        perfil.setSenha(senha);//
+        perfil.setSenha(senha);
         user = "Cozinheiro";
         perfil.setUser(user);
         //Cardapio();
@@ -54,17 +54,21 @@ public class Cozinheiros extends Pessoa{
     }
 
     public void EntrarCozinheiro() {
-        String nome="", user="";
-        int senha=0;
-        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
+     //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
-        nome = sc.nextLine();
-        perfil.setNome(nome);
+        String nomeInserido = sc.nextLine();
+        //nomeInserido = sc.nextLine();
+        while (!nomeInserido.equals(perfil.getNome())){
+            System.out.println("Esse nome de usuário não existe. Tente novamente: ");
+            nomeInserido = sc.nextLine();
+        }
         System.out.println("Digite uma senha numérica: ");
-        //exceção de int 
-        senha = sc.nextInt();
-        perfil.setSenha(senha);
-        user = "Cozinheiro";
+        int senhaInserida = sc.nextInt();
+        while (senhaInserida != perfil.getSenha()){
+            System.out.println("Senha incorreta. Tente novamente: ");
+            senhaInserida = sc.nextInt();sc.nextLine();
+        }
+        user = "Cozinheiro"; //precisa colocar antes? 
         perfil.setUser(user);
         System.out.println(" ");
         System.out.println(perfil.toString());
@@ -85,6 +89,18 @@ public class Cozinheiros extends Pessoa{
     }
 
     public void opcoesTelaCozinheiros(){
+        int opcoes = sc.nextInt();
+
+        if (opcoes == 1) {
+            exibirPedidosFeitos();
+        }
+        else if (opcoes == 2) {
+            //exibirganhos -> histórico? ou só dinheiro mesmo? pq se for o caso pode só exibir na tela inicial (fazer uma estilização)
+        }
+        else if (opcoes ==3) {
+            //voltar ao menu
+            return;
+        }
 
     }
 
@@ -94,6 +110,7 @@ public class Cozinheiros extends Pessoa{
         System.out.println("1- Visualizar pedidos");
         System.out.println("2- Visualizar valor ganho com a venda dos pratos");
         System.out.println("3- Sair");
+        opcoesTelaCozinheiros();
     }
 
     public void exibirTelaCozinheiro(){
