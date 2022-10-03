@@ -38,16 +38,17 @@ public class Cozinheiros extends Pessoa{
         int quantidadeDeCardapios = sc.nextInt();
         //setQuantidadeDeCardapios(quantidadeDeCardapios);
         setCardapio(cardapio, quantidadeDeCardapios);
-        System.out.println("Seus pratos: ");
+        System.out.println("Digite seus pratos: ");
         cardapio[0] = sc.nextLine();
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             // System.out.println("coloque um pratinho");
              System.out.println((i+1)+ ": ");
              cardapio[i] = sc.nextLine();
          }
+        System.out.println(" ");
         System.out.println(perfil.toString());
         for (int i = 0; i < quantidadeDeCardapios; i++) {
-            System.out.println((i+1)+ ": " + cardapio[i]);
+            System.out.println("Prato "+(i+1)+ ": " + cardapio[i]);
         }
         return perfil;
     }
@@ -65,11 +66,49 @@ public class Cozinheiros extends Pessoa{
         perfil.setSenha(senha);
         user = "Cozinheiro";
         perfil.setUser(user);
+        System.out.println(" ");
         System.out.println(perfil.toString());
         exibirCardapio();
+        System.out.println("\u001b[1mSuas estrelas: \u001b[m ");
+        float avaliacao = pedido.getMediaAvaliacao();
+        if (avaliacao == 0)
+        {
+            System.out.println("você ainda não recebeu nenhuma avaliação");
+        }
+        else {
+            System.out.println(avaliacao + " estrelas ");
+        }
         exibirPedidosFeitos();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
+    }
+
+    public void opcoesTelaCozinheiros(){
+        System.out.println("Escolha uma opção:");
+        System.out.println("1- Visualizar quantos pedidos foram realizados");
+        System.out.println("2- Visualizar a media de avaliações");
+        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
+        System.out.println("4- sair");
+    }
+
+    public void exibirTelaCozinheiro(){
+        String nome="", user="";
+        int senha=0;
+        opcoesTelaCozinheiros();
+        System.out.println("==========================");
+        int op = sc.nextInt();
+          if(op==1){
+
+          }
+          else if(op==2){
+
+          }
+          else if(op==3){
+
+          }
+          else if(op==4){
+            
+          }
     }
 
     public void cozinheiro1(){
@@ -93,7 +132,8 @@ public class Cozinheiros extends Pessoa{
         Cardapios(cardapio4);
     }
     public void exibirPedidosFeitos(){
-            System.out.println(getItemEscolhidoDoCardapio());
+        System.out.println("\u001b[1mPedidos: \u001b[m ");
+        System.out.println(getItemEscolhidoDoCardapio());
     }
 
     public float getAvaliacao() {
@@ -112,6 +152,9 @@ public class Cozinheiros extends Pessoa{
     }
     public String getItemEscolhidoDoCardapio(){
        String itemEscolhido= pedido.EscolhadoItemCardapio(cardapio, indescolhido);
+       if (itemEscolhido == null){
+            return "Você ainda não recebeu um pedido";
+       }
         return itemEscolhido; 
     }
 

@@ -38,6 +38,6 @@ public class Pessoa {
     }
 
     public String toString(){
-        return "\u001b[1m " + user + ": " + nome + "\u001b[m ";
+        return "\u001b[1m" + user + ": " + nome + "\u001b[m ";
     }
 }
