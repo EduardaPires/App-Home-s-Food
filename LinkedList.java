@@ -22,7 +22,7 @@ public class LinkedList<T extends Comparable<T>> {
 			this.qtd ++;
 		}
 		else if(valor.compareTo(this.primeiro.getValue()) < 0){ // inserção no início
-			 novo.setProx(this.primeiro);
+			 novo.setNext(atual);(this.primeiro);
 			 this.primeiro = novo;
 			 this.qtd ++;
 		}
