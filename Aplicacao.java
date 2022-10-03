@@ -17,8 +17,8 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LinkedList <Cozinheiros> cozinheiros = new LinkedList();
-        LinkedList <Cliente> clientes = new LinkedList();
+        //LinkedList <Cozinheiros> cozinheiros = new LinkedList();
+        //LinkedList <Cliente> clientes = new LinkedList();
 
         exibiropcoes();
         //System.out.println("\u001b[1m Pedido entregue! \u001b[m");

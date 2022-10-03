@@ -78,17 +78,22 @@ public class Cozinheiros extends Pessoa{
         else {
             System.out.println(avaliacao + " estrelas ");
         }
-        exibirPedidosFeitos();
+        exibiropcoesTelaCozinheiros();
+        //exibirPedidosFeitos(); -> mostra com escolha de pedidos
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
 
     public void opcoesTelaCozinheiros(){
-        System.out.println("Escolha uma opção:");
-        System.out.println("1- Visualizar quantos pedidos foram realizados");
-        System.out.println("2- Visualizar a media de avaliações");
-        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
-        System.out.println("4- sair");
+
+    }
+
+    public void exibiropcoesTelaCozinheiros(){
+        System.out.println("");
+        System.out.println("\u001b[1mEscolha uma opção: \u001b[m ");
+        System.out.println("1- Visualizar pedidos");
+        System.out.println("2- Visualizar valor ganho com a venda dos pratos");
+        System.out.println("3- Sair");
     }
 
     public void exibirTelaCozinheiro(){
