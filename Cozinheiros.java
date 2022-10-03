@@ -4,12 +4,6 @@ public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
 
-<<<<<<< HEAD
-=======
-    String nome="", user="";
-    int senha=0;
-    Pessoa perfil = new Pessoa(nome, user, senha);
->>>>>>> be23aa86a57365e6873c0a9ba2d545f5b62d8d96
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 
@@ -17,7 +11,7 @@ public class Cozinheiros extends Pessoa{
     private int quantidadeDeAvaliacoes;
     private int indescolhido;
 
-
+    
     public Cozinheiros(String nome, String user, int senha) {
         super(nome, user, senha);
         this.cardapio = new String[4];
@@ -27,11 +21,14 @@ public class Cozinheiros extends Pessoa{
     }
 
     public Pessoa CadastroCozinheiro() {
-        //Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
+        String nome="", user="";
+        int senha=0;
+        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
         System.out.println("Digite uma senha numérica: ");
+        //exceção de int 
         senha = sc.nextInt();
         perfil.setSenha(senha);
         user = "Cozinheiro";
@@ -48,7 +45,6 @@ public class Cozinheiros extends Pessoa{
              System.out.println((i+1)+ ": ");
              cardapio[i] = sc.nextLine();
          }
-        System.out.println(" ");
         System.out.println(perfil.toString());
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             System.out.println("Prato "+(i+1)+ ": " + cardapio[i]);
@@ -57,71 +53,31 @@ public class Cozinheiros extends Pessoa{
     }
 
     public void EntrarCozinheiro() {
-     //em vez de super usar perfil
+        String nome="", user="";
+        int senha=0;
+        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
-        String nomeInserido = sc.nextLine();
-        //nomeInserido = sc.nextLine();
-        while (!nomeInserido.equals(perfil.getNome())){
-            System.out.println("Esse nome de usuário não existe. Tente novamente: ");
-            nomeInserido = sc.nextLine();
-        }
+        nome = sc.nextLine();
+        perfil.setNome(nome);
         System.out.println("Digite uma senha numérica: ");
-        int senhaInserida = sc.nextInt();
-        while (senhaInserida != perfil.getSenha()){
-            System.out.println("Senha incorreta. Tente novamente: ");
-            senhaInserida = sc.nextInt();sc.nextLine();
-        }
-        user = "Cozinheiro"; //precisa colocar antes? 
+        //exceção de int 
+        senha = sc.nextInt();
+        perfil.setSenha(senha);
+        user = "Cozinheiro";
         perfil.setUser(user);
-        System.out.println(" ");
         System.out.println(perfil.toString());
         exibirCardapio();
-        System.out.println("\u001b[1mSuas estrelas: \u001b[m ");
-        float avaliacao = pedido.getMediaAvaliacao();
-        if (avaliacao == 0)
-        {
-            System.out.println("você ainda não recebeu nenhuma avaliação");
-        }
-        else {
-            System.out.println(avaliacao + " estrelas ");
-        }
-        exibiropcoesTelaCozinheiros();
-        //exibirPedidosFeitos(); -> mostra com escolha de pedidos
+        exibirPedidosFeitos();
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
 
     public void opcoesTelaCozinheiros(){
-<<<<<<< HEAD
         System.out.println("Escolha uma opção:");
         System.out.println("1- Visualizar quantos pedidos foram realizados");
         //System.out.println("2- ");
         System.out.println("2- Visualizar qual o valor total ganho com a venda dos pratos");
         System.out.println("3- sair");
-=======
-        int opcoes = sc.nextInt();
-
-        if (opcoes == 1) {
-            exibirPedidosFeitos();
-        }
-        else if (opcoes == 2) {
-            //exibirganhos -> histórico? ou só dinheiro mesmo? pq se for o caso pode só exibir na tela inicial (fazer uma estilização)
-        }
-        else if (opcoes ==3) {
-            //voltar ao menu
-            return;
-        }
-
-    }
-
-    public void exibiropcoesTelaCozinheiros(){
-        System.out.println("");
-        System.out.println("\u001b[1mEscolha uma opção: \u001b[m ");
-        System.out.println("1- Visualizar pedidos");
-        System.out.println("2- Visualizar valor ganho com a venda dos pratos");
-        System.out.println("3- Sair");
-        opcoesTelaCozinheiros();
->>>>>>> be23aa86a57365e6873c0a9ba2d545f5b62d8d96
     }
 
     public void exibirTelaCozinheiro(){
@@ -166,8 +122,7 @@ public class Cozinheiros extends Pessoa{
         Cardapios(cardapio4);
     }
     public void exibirPedidosFeitos(){
-        System.out.println("\u001b[1mPedidos: \u001b[m ");
-        System.out.println(getItemEscolhidoDoCardapio());
+            System.out.println(getItemEscolhidoDoCardapio());
     }
 
     public float getAvaliacao() {
@@ -186,9 +141,6 @@ public class Cozinheiros extends Pessoa{
     }
     public String getItemEscolhidoDoCardapio(){
        String itemEscolhido= pedido.EscolhadoItemCardapio(cardapio, indescolhido);
-       if (itemEscolhido == null){
-            return "Você ainda não recebeu um pedido";
-       }
         return itemEscolhido; 
     }
 
@@ -237,11 +189,6 @@ public class Cozinheiros extends Pessoa{
         System.out.println("Você escolheu " + comida);
         pedido.Avaliacao();
         
-    }
-
-    public int CompareTo(Cozinheiros cozinheiro){
-        int resultado = this.getNome().compareTo(cozinheiro.getNome());
-        return resultado;
     }
 
    // public void adcionarOpcaoNoCardapio (String prato){
