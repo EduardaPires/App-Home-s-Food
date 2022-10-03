@@ -54,6 +54,10 @@ public class Aplicacao {
             op = sc.nextInt();sc.nextLine();
             if (op == 1) {
               Pessoa cozinheiro = cozinheiros.EntrarCozinheiro();
+                if(listaCozinheiros.contains(cozinheiro.getSenha()) && listaCozinheiros.contains(cozinheiro.getUser())){
+                    //EntrarCozinheiro retorna login(tipo pessoa)
+                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                }
         
             }
             else if (op== 2) {
