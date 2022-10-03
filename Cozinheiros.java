@@ -11,7 +11,7 @@ public class Cozinheiros extends Pessoa{
     private int quantidadeDeAvaliacoes;
     private int indescolhido;
 
-    
+
     public Cozinheiros(String nome, String user, int senha) {
         super(nome, user, senha);
         this.cardapio = new String[4];
@@ -30,7 +30,7 @@ public class Cozinheiros extends Pessoa{
         System.out.println("Digite uma senha numérica: ");
         //exceção de int 
         senha = sc.nextInt();
-        perfil.setSenha(senha);
+        perfil.setSenha(senha);//
         user = "Cozinheiro";
         perfil.setUser(user);
         //Cardapio();
