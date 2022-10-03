@@ -2,6 +2,8 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
+import javax.management.ValueExp;
+
 public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
@@ -80,7 +82,7 @@ public class Aplicacao {
                 Pessoa clienteLogin = cliente.EntrarCliente();
                 if(listaClientes.contains(clienteLogin.getSenha())){
                     System.out.println("Login efetuado com sucesso!");
-                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                    //pegar objeto que está na lista e que é igual à cópia clienteLogin
                 }
                 else{
                     System.out.println("Usuário não corresponde / Senha incorreta"); 
