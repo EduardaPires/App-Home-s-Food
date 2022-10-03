@@ -77,7 +77,7 @@ public class Aplicacao {
             }
             else if (op == 3) {
                 Pessoa clienteLogin = cliente.EntrarCliente();
-                if(listaClientes.contains(cliente.getSenha())){
+                if(listaClientes.contains(clienteLogin.getSenha())){
                     System.out.println("Login efetuado com sucesso!");
                     //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
                 }
