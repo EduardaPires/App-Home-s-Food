@@ -37,7 +37,26 @@ public class Pessoa {
         this.user = user;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Pessoa other = (Pessoa) obj;
+        if (nome == null) {
+            if (other.nome != null)
+                return false;
+        } else if (!nome.equals(other.nome))
+            return false;
+        if (senha != other.senha)
+            return false;
+        return true;
+    }
+
     public String toString(){
-        return "\u001b[1m " + user + ": " + nome + "\u001b[m ";
+        return "\u001b[1m" + user + ": " + nome + "\u001b[m ";
     }
 }

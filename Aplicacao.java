@@ -1,5 +1,7 @@
 //1. encapsulamento, herança/classe abstrata, exception, solid, adicionar 3 padrões de projeto
+import java.util.LinkedList;
 import java.util.Scanner;
+
 public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
@@ -17,8 +19,7 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LinkedList <Cozinheiros> cozinheiros = new LinkedList();
-        LinkedList <Cliente> clientes = new LinkedList();
+       
 
         exibiropcoes();
         //System.out.println("\u001b[1m Pedido entregue! \u001b[m");
@@ -45,22 +46,43 @@ public class Aplicacao {
         int senha=0;
         Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
         Cliente cliente = new Cliente(nome, user, senha);
+        LinkedList listaCozinheiros = new LinkedList();
+        LinkedList listaClientes = new LinkedList();
         int op;
         do {
             opcoes(); 
             op = sc.nextInt();sc.nextLine();
             if (op == 1) {
-                cozinheiros.EntrarCozinheiro();
+              Pessoa cozinheiro = cozinheiros.EntrarCozinheiro();
+                if(listaCozinheiros.contains(cozinheiro.getSenha()) && listaCozinheiros.contains(cozinheiro.getUser())){
+                    //EntrarCozinheiro retorna login(tipo pessoa)
+                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                }
+        
             }
             else if (op== 2) {
-                cozinheiros.CadastroCozinheiro();
-
+                Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
+                if(listaCozinheiros.contains(novoCozinheiro.getUser())){
+                    System.out.println("Usuário já cadastrado!");
+                }
+                else{
+                    listaCozinheiros.addLast(novoCozinheiro);
+                    System.out.println("Cadastro feito com sucesso!");
+                }
             }
             else if (op == 3) {
                 cliente.EntrarCliente();
             }
             else if (op== 4) {
-                cliente.CadastroCliente();
+                Pessoa novoCliente = cliente.CadastroCliente();
+                if(listaCozinheiros.contains(novoCliente.getUser())){
+                    System.out.println("Usuário já cadastrado!");
+                }
+                else{
+                    listaCozinheiros.addLast(novoCliente);
+                    System.out.println("Cadastro feito com sucesso!");
+                }
+                
             }
             else if (op == 5){
                 System.out.println("Você ficou offline");

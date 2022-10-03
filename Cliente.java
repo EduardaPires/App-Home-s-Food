@@ -3,6 +3,9 @@ public class Cliente extends Pessoa{
 
     Scanner sc = new Scanner(System.in);
     FazerPedido pedido;
+    String nome="", user="";
+    int senha=0;
+    Pessoa perfil = new Pessoa(nome, user, senha);
     private Cozinheiros cozinheiros;
     public Cliente(String nome, String user, int senha) {
        super(nome, user, senha);
@@ -10,9 +13,7 @@ public class Cliente extends Pessoa{
     }
 
     public Pessoa CadastroCliente() {
-        String nome="", user="";
-        int senha=0;
-        Pessoa perfil = new Pessoa(nome, nome, senha); //em vez de super usar perfil
+        //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
@@ -24,8 +25,38 @@ public class Cliente extends Pessoa{
         return perfil;
     }
 
+    public int CompareTo(Cliente cliente){
+        int resultado = this.getNome().compareTo(cliente.getNome());
+        return resultado;
+    }
+
+   // public void menu(){
+   //     Pessoa pessoa=CadastroCliente();
+   //     System.out.println(" ");
+   //     System.out.println(pessoa.toString());
+   // }
+
     public void EntrarCliente() {
-        menu();
+       // menu();
+        System.out.println("Digite seu nome de usuário: ");
+        String nomeInserido = sc.nextLine();
+        nomeInserido = sc.nextLine();
+        while (!nomeInserido.equals(perfil.getNome())){
+            System.out.println("Esse nome de usuário não existe. Tente novamente: ");
+            nomeInserido = sc.nextLine();
+        }
+        System.out.println("Digite uma senha numérica: ");
+        int senhaInserida = sc.nextInt();
+        while (senhaInserida != perfil.getSenha()){
+            System.out.println("Senha incorreta. Tente novamente: ");
+            senhaInserida = sc.nextInt();
+        }
+        user = "Cliente";
+        perfil.setUser(user);
+        //nome -> nome de usuário 
+        //user-> TIPO de usuário: cliente ou cozinheiro
+        System.out.println(" ");
+        System.out.println(perfil.toString());
         exibirTelaCliente();
     }
 
@@ -42,6 +73,7 @@ public class Cliente extends Pessoa{
     public void exibirTelaCliente(){
         String nome="", user="";
         int senha=0;
+        int qtd=0;
         opcoesCozinheiros();
         System.out.println("==========================");
         int op = sc.nextInt();
@@ -50,29 +82,28 @@ public class Cliente extends Pessoa{
             cozinheiros.cozinheiro1();
             //fazerpedido
             //System.out.println(cardapio1[0]);
+            qtd++;
         } 
         else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro2();   
-            
+            qtd++;
         
         } 
         else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro3();
+            qtd++;
         } 
         else if (op==4) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro4();
+            qtd++;
         } 
         else if (op==5) {
             
         }
-    }
 
-    public void menu(){
-        Pessoa pessoa=CadastroCliente();
-        System.out.println(pessoa.toString());
     }
 
 }
