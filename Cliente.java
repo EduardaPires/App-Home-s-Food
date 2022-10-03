@@ -25,6 +25,7 @@ public class Cliente extends Pessoa{
         return perfil;
     }
 
+    
     public int CompareTo(Cliente cliente){
         int resultado = this.getNome().compareTo(cliente.getNome());
         return resultado;
