@@ -59,6 +59,7 @@ public class Aplicacao {
                     System.out.println("Login efetuado com sucesso!");
                     //EntrarCozinheiro retorna login(tipo pessoa)
                     //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                    // não usar esse objeto novo que eu criei de comparação pra mostrar
                 }
                 else{
                   System.out.println("Usuário não corresponde / Senha incorreta"); 
