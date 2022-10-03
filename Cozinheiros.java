@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Cozinheiros extends Pessoa{
+public class Cozinheiros implements Comparable<Cozinheiros>{
     
     Scanner sc = new Scanner(System.in);
     
