@@ -52,24 +52,18 @@ public class Cozinheiros extends Pessoa{
         return perfil;
     }
 
-    public void EntrarCozinheiro() {
+    public Pessoa EntrarCozinheiro() {
         String nome="", user="";
         int senha=0;
         Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
-        perfil.setNome(nome);
         System.out.println("Digite uma senha numérica: ");
         //exceção de int 
         senha = sc.nextInt();
-        perfil.setSenha(senha);
         user = "Cozinheiro";
-        perfil.setUser(user);
-        System.out.println(perfil.toString());
-        exibirCardapio();
-        exibirPedidosFeitos();
-        //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
-        //chamará classe FazerPedido
+        Pessoa login = new Pessoa(nome, user, senha);
+        return login;
     }
 
     public void opcoesTelaCozinheiros(){

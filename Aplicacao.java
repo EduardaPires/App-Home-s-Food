@@ -53,7 +53,8 @@ public class Aplicacao {
             opcoes(); 
             op = sc.nextInt();sc.nextLine();
             if (op == 1) {
-                cozinheiros.EntrarCozinheiro();
+              Pessoa cozinheiro = cozinheiros.EntrarCozinheiro();
+        
             }
             else if (op== 2) {
                 Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
