@@ -69,7 +69,8 @@ public class FazerPedido {
         System.out.println("Você recebeu x pedidos."); //fazer contador sempre q for feito um pedido pro mesmo cozinheiro??? contador pra cada um ent
         //renda pros cozinheiros, se sim fazer string de int e var pra renda total (sempre somando ao fazer novo pedido)
         //tá... e depois?
-        System.out.println("Pedido recebido! Você recebeu uma avaliação de " + estrelas + "!");
+        System.out.println("Pedido recebido!");
+        //volta ao menuzinho com o perfil em cima, os pedidos, + mostrando a média
     }
 
     public void setMediaAvaliacao(int estrelas) {
@@ -89,6 +90,7 @@ public class FazerPedido {
         setMediaAvaliacao(estrelas);
         System.out.println("\u001b[1m Obrigada por dar "+estrelas+" estrelas! \u001b[m");
         System.out.println("\u001b[1m ============================== \u001b[m ");
+
         //voltar a tela inicial
     }
 
