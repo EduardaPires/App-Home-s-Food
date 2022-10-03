@@ -4,7 +4,7 @@ public class LinkedList<T> {
     private int qtd;
 
     public boolean isEmpty(){
-        if(this.first == null){
+        if(this.primeiro == null){
             return true;
         }
         else{
