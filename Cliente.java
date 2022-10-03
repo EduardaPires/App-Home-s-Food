@@ -48,6 +48,8 @@ public class Cliente extends Pessoa{
         }
         user = "Cliente";
         perfil.setUser(user);
+        //nome -> nome de usuário 
+        //user-> TIPO de usuário: cliente ou cozinheiro
         System.out.println(" ");
         System.out.println(perfil.toString());
         exibirTelaCliente();
@@ -78,8 +80,6 @@ public class Cliente extends Pessoa{
         else if (op==2) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
             cozinheiros.cozinheiro2();   
-            
-        
         } 
         else if (op==3) {
             Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
