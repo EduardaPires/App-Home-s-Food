@@ -205,6 +205,11 @@ public class Cozinheiros extends Pessoa{
         
     }
 
+    public int CompareTo(Cozinheiros cozinheiro){
+        int resultado = this.getNome().compareTo(cozinheiro.getNome());
+        return resultado;
+    }
+
    // public void adcionarOpcaoNoCardapio (String prato){
    //     this.cardapio[quantidadeDeCardapios] = prato;
    //     quantidadeDeCardapios++;
