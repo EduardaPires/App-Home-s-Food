@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Cozinheiros implements Comparable<Cozinheiros>{
+public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
     
@@ -11,7 +11,7 @@ public class Cozinheiros implements Comparable<Cozinheiros>{
     private int quantidadeDeAvaliacoes;
     private int indescolhido;
 
-    
+
     public Cozinheiros(String nome, String user, int senha) {
         super(nome, user, senha);
         this.cardapio = new String[4];
@@ -30,7 +30,7 @@ public class Cozinheiros implements Comparable<Cozinheiros>{
         System.out.println("Digite uma senha numérica: ");
         //exceção de int 
         senha = sc.nextInt();
-        perfil.setSenha(senha);
+        perfil.setSenha(senha);//
         user = "Cozinheiro";
         perfil.setUser(user);
         //Cardapio();
@@ -78,17 +78,22 @@ public class Cozinheiros implements Comparable<Cozinheiros>{
         else {
             System.out.println(avaliacao + " estrelas ");
         }
-        exibirPedidosFeitos();
+        exibiropcoesTelaCozinheiros();
+        //exibirPedidosFeitos(); -> mostra com escolha de pedidos
         //mostrar cozinheiros e selecioná-los para ver cardápio, onde tbm haverá seleção para realizar pedidos
         //chamará classe FazerPedido
     }
 
     public void opcoesTelaCozinheiros(){
-        System.out.println("Escolha uma opção:");
-        System.out.println("1- Visualizar quantos pedidos foram realizados");
-        System.out.println("2- Visualizar a media de avaliações");
-        System.out.println("3- Visualizar qual o valor ganho com a venda dos pratos");
-        System.out.println("4- sair");
+
+    }
+
+    public void exibiropcoesTelaCozinheiros(){
+        System.out.println("");
+        System.out.println("\u001b[1mEscolha uma opção: \u001b[m ");
+        System.out.println("1- Visualizar pedidos");
+        System.out.println("2- Visualizar valor ganho com a venda dos pratos");
+        System.out.println("3- Sair");
     }
 
     public void exibirTelaCozinheiro(){
