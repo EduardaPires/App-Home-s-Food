@@ -54,8 +54,8 @@ public class Aplicacao {
             op = sc.nextInt();sc.nextLine();
             if (op == 1) {
                 
-                Pessoa cozinheiro = cozinheiros.EntrarCozinheiro();
-                if(listaCozinheiros.contains(cozinheiro.getSenha())){
+                Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
+                if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
                     System.out.println("Login efetuado com sucesso!");
                     //EntrarCozinheiro retorna login(tipo pessoa)
                     //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
@@ -76,7 +76,14 @@ public class Aplicacao {
                 }
             }
             else if (op == 3) {
-                cliente.EntrarCliente();
+                Pessoa clienteLogin = cliente.EntrarCliente();
+                if(listaClientes.contains(cliente.getSenha())){
+                    System.out.println("Login efetuado com sucesso!");
+                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                }
+                else{
+                    System.out.println("Usuário não corresponde / Senha incorreta"); 
+                }
             }
             else if (op== 4) {
                 Pessoa novoCliente = cliente.CadastroCliente();
