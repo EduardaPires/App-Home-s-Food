@@ -47,6 +47,7 @@ public class LinkedList<T extends Comparable<T>> {
 			}
 		}
 	}
+	
 
     //testando commit no notebook para ver se aparece
 
