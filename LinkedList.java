@@ -1,5 +1,7 @@
 public class LinkedList<T> {
-    private Node<T> first;
+    private Node<T> primeiro;
+    private Node<T> ultimo;
+    private int qtd;
 
     public boolean isEmpty(){
         if(this.first == null){
@@ -12,21 +14,7 @@ public class LinkedList<T> {
 
     //testando commit no notebook para ver se aparece
 
-    public void insertEnd(T pessoa){
-        Node valor = new Node(pessoa);
 
-        if(this.isEmpty()){
-            this.first = valor;
-        }
-        else{
-            Node aux = this.first;
-            while(aux.getNext() != null){
-                aux = aux.getNext();
-            }
-            aux.setNext(valor);
-        }
-
-    }
 
 
     
