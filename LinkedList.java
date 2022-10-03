@@ -1,4 +1,4 @@
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable<T>> {
     private Node<T> primeiro;
     private Node<T> ultimo;
     private int qtd;
