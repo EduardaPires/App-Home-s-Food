@@ -36,28 +36,19 @@ public class Cliente extends Pessoa{
    //     System.out.println(pessoa.toString());
    // }
 
-    public void EntrarCliente() {
+    public Pessoa EntrarCliente() {
        // menu();
         System.out.println("Digite seu nome de usuário: ");
         String nomeInserido = sc.nextLine();
         nomeInserido = sc.nextLine();
-        while (!nomeInserido.equals(perfil.getNome())){
-            System.out.println("Esse nome de usuário não existe. Tente novamente: ");
-            nomeInserido = sc.nextLine();
-        }
+
         System.out.println("Digite uma senha numérica: ");
         int senhaInserida = sc.nextInt();
-        while (senhaInserida != perfil.getSenha()){
-            System.out.println("Senha incorreta. Tente novamente: ");
-            senhaInserida = sc.nextInt();
-        }
         user = "Cliente";
-        perfil.setUser(user);
-        //nome -> nome de usuário 
-        //user-> TIPO de usuário: cliente ou cozinheiro
-        System.out.println(" ");
-        System.out.println(perfil.toString());
-        exibirTelaCliente();
+
+        Pessoa login = new Pessoa(nomeInserido, user, senhaInserida)
+
+        return login;
     }
 
     public static void opcoesCozinheiros() {
