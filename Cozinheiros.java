@@ -4,10 +4,7 @@ public class Cozinheiros extends Pessoa{
     
     Scanner sc = new Scanner(System.in);
 
-<<<<<<< HEAD
     
-=======
->>>>>>> ae60c0231e6e57e4a6712036d8523448827c2622
     private FazerPedido pedido;
     private String[] cardapio;
     private float avaliacao; 

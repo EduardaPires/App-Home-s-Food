@@ -42,14 +42,25 @@ public class Aplicacao {
 
     }
 
+    public LinkedList listaCozinheiros() {
+        return null;
+    }
+
+    public LinkedList listaClientes() {
+        return null;
+    }
+
+
     public static void exibiropcoes() {
         Scanner sc = new Scanner(System.in);
         String nome="", user="";
         int senha=0;
         Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
         Cliente cliente = new Cliente(nome, user, senha);
-        LinkedList listaCozinheiros = new LinkedList();
-        LinkedList listaClientes = new LinkedList();
+        LinkedList<Pessoa> listaCozinheiros = new LinkedList<Pessoa>();
+        LinkedList<Pessoa> listaClientes = new LinkedList<Pessoa>();
+
+    
         int op;
         do {
             opcoes(); 
@@ -80,7 +91,7 @@ public class Aplicacao {
             }
             else if (op == 3) {
                 Pessoa clienteLogin = cliente.EntrarCliente();
-                if(listaClientes.contains(clienteLogin.getSenha())){
+                if(listaClientes.contains(clienteLogin.getNome())){
                     System.out.println("Login efetuado com sucesso!");
                     //pegar objeto que está na lista e que é igual à cópia clienteLogin
                 }
@@ -90,11 +101,12 @@ public class Aplicacao {
             }
             else if (op== 4) {
                 Pessoa novoCliente = cliente.CadastroCliente();
-                if(listaCozinheiros.contains(novoCliente.getUser())){
+                //listaClientes.addLast(novoCliente);               
+                if(listaClientes.contains(novoCliente)){
                     System.out.println("Usuário já cadastrado!");
                 }
                 else{
-                    listaCozinheiros.addLast(novoCliente);
+                    listaClientes.addLast(novoCliente);
                     System.out.println("Cadastro feito com sucesso!");
                 }
                 

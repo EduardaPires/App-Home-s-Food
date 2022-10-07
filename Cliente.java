@@ -22,7 +22,7 @@ public class Cliente extends Pessoa{
         perfil.setSenha(senha);
         user = "Cliente";
         perfil.setUser(user);
-        return perfil;
+        return perfil; //vai adicionar na lista! onde isso acontece?
     }
 
     public int CompareTo(Cliente cliente){
@@ -40,13 +40,14 @@ public class Cliente extends Pessoa{
        // menu();
         System.out.println("Digite seu nome de usuário: ");
         String nomeInserido = sc.nextLine();
-        nomeInserido = sc.nextLine();
+        sc.nextLine();
+        //nomeInserido = sc.nextLine();
 
         System.out.println("Digite uma senha numérica: ");
         int senhaInserida = sc.nextInt();
         user = "Cliente";
 
-        Pessoa login = new Pessoa(nomeInserido, user, senhaInserida)
+        Pessoa login = new Pessoa(nomeInserido, user, senhaInserida);
 
         return login;
     }
