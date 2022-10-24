@@ -95,6 +95,7 @@ public class Aplicacao {
                 if(listaClientes.contains(clienteLogin.getNome())){
                     System.out.println("Login efetuado com sucesso!");
                     //pegar objeto que está na lista e que é igual à cópia clienteLogin
+                    //https://java2blog.com/print-linkedlist-in-java/
                 }
                 else{
                     System.out.println("Usuário não corresponde / Senha incorreta"); 
@@ -111,7 +112,9 @@ public class Aplicacao {
                     System.out.println("Cadastro feito com sucesso!");
                 }
                 
+                
             }
+
             else if (op == 5){
                 System.out.println("Você ficou offline");
                 return; 
