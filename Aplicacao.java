@@ -110,8 +110,9 @@ public class Aplicacao {
                     System.out.println("Cadastro feito com sucesso!");
                 }
                 
+                
             }
-            else if (op == 5){
+            else if (op == 7){
                 System.out.println("Você ficou offline");
                 return; 
             }
