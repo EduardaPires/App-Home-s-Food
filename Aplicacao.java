@@ -112,7 +112,8 @@ public class Aplicacao {
                 
                 
             }
-            else if (op == 7){
+
+            else if (op == 5){
                 System.out.println("Você ficou offline");
                 return; 
             }
