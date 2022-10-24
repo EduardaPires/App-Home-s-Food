@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import javax.management.ValueExp;
 
+import Exception.LoginException;
+
 public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
@@ -75,17 +77,17 @@ public class Aplicacao {
             if (op == 1) {
                 
                 Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
-
+                try{
                     if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
-                    System.out.println("Login efetuado com sucesso!");
-                    //EntrarCozinheiro retorna login(tipo pessoa)
-                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
-                    // não usar esse objeto novo que eu criei de comparação pra mostrar
+                        System.out.println("Login efetuado com sucesso!");
+                        //EntrarCozinheiro retorna login(tipo pessoa)
+                        //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                        // não usar esse objeto novo que eu criei de comparação pra mostrar
                 }
-                else{
-                  System.out.println("Usuário não corresponde / Senha incorreta"); 
-                }
-        
+            } catch(LoginException e){
+                System.out.println("Usuário não corresponde / Senha incorreta"); 
+            }
+            
             }
             else if (op== 2) {
                 Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
