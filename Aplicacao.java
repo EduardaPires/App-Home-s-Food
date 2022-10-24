@@ -93,8 +93,16 @@ public class Aplicacao {
                 Pessoa clienteLogin = cliente.EntrarCliente();
                 if(listaClientes.contains(clienteLogin.getNome())){
                     System.out.println("Login efetuado com sucesso!");
-                    //pegar objeto que está na lista e que é igual à cópia clienteLogin
-                    //https://java2blog.com/print-linkedlist-in-java/
+                    
+                    System.out.println("Veja nossas opções!");
+                    System.out.println();
+                    int size = listaCozinheiros.size();
+
+                    for(int i = 0; i < size; i++){
+                        System.out.println(listaCozinheiros.get(i));
+                    }
+
+                
                 }
                 else{
                     System.out.println("Usuário não corresponde / Senha incorreta"); 
