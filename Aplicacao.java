@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import javax.management.ValueExp;
 
+import Exception.LoginException;
+
 public class Aplicacao {
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
@@ -61,23 +63,31 @@ public class Aplicacao {
         LinkedList<Pessoa> listaClientes = new LinkedList<Pessoa>();
 
     
-        int op;
+        int op = 0;
         do {
-            opcoes(); 
-            op = sc.nextInt();sc.nextLine();
+            try{
+                
+                opcoes(); 
+                op = sc.nextInt();sc.nextLine();
+            }
+            catch (RuntimeException re){
+                System.out.println("numero invalido");
+                while(op < 1 && op > 5);
+            }
             if (op == 1) {
                 
                 Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
-                if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
-                    System.out.println("Login efetuado com sucesso!");
-                    //EntrarCozinheiro retorna login(tipo pessoa)
-                    //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
-                    // não usar esse objeto novo que eu criei de comparação pra mostrar
+                try{
+                    if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
+                        System.out.println("Login efetuado com sucesso!");
+                        //EntrarCozinheiro retorna login(tipo pessoa)
+                        //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
+                        // não usar esse objeto novo que eu criei de comparação pra mostrar
                 }
-                else{
-                  System.out.println("Usuário não corresponde / Senha incorreta"); 
-                }
-        
+            } catch(LoginException e){
+                System.out.println("Usuário não corresponde / Senha incorreta"); 
+            }
+            
             }
             else if (op== 2) {
                 Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
