@@ -68,7 +68,8 @@ public class Aplicacao {
             if (op == 1) {
                 
                 Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
-                if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
+
+                    if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
                     System.out.println("Login efetuado com sucesso!");
                     //EntrarCozinheiro retorna login(tipo pessoa)
                     //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
