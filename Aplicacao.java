@@ -101,7 +101,7 @@ public class Aplicacao {
             }
             else if (op == 3) {
                 Pessoa clienteLogin = cliente.EntrarCliente();
-                if(listaClientes.contains(clienteLogin.getNome())){
+                if(listaClientes.contains(clienteLogin.getSenha())){
                     System.out.println("Login efetuado com sucesso!");
                     
                     System.out.println("Veja nossas opções!");
