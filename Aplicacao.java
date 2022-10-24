@@ -61,10 +61,17 @@ public class Aplicacao {
         LinkedList<Pessoa> listaClientes = new LinkedList<Pessoa>();
 
     
-        int op;
+        int op = 0;
         do {
-            opcoes(); 
-            op = sc.nextInt();sc.nextLine();
+            try{
+                
+                opcoes(); 
+                op = sc.nextInt();sc.nextLine();
+            }
+            catch (RuntimeException re){
+                System.out.println("numero invalido");
+                while(op < 1 && op > 5);
+            }
             if (op == 1) {
                 
                 Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
