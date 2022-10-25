@@ -7,6 +7,7 @@ import javax.management.ValueExp;
 import Exception.LoginException;
 
 public class Aplicacao {
+    
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
 
@@ -23,35 +24,17 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-       
-
+        
         exibiropcoes();
-        //System.out.println("\u001b[1m Pedido entregue! \u001b[m");
-        /*System.out.println("\u001b[37m \u001b[44m Pedido entregue \u001b[m");
-       System.out.println("De 0 a 5 estrelas, como você avalia o nosso cozinheiro? ");
-       int estrelas = sc.nextInt();
-       //this.quantAvaliacoes++;
-       //setAvaliacao(estrelas);
-       //setMediaAvaliacao(estrelas);
-       System.out.println("Obrigada por dar " + estrelas + " estrelas!");
-       System.out.println(" ==================== ");*/
-        //perguntar se o cliente quer fazer pedido, se sim mostrar cardapio, se for cozinheiro mostra pedidos recebidos ou deixar adicionar pratos
-       //cliente: variavel de cardapio: escolha uma comida do cardapio (input); fazer combinações/combos (cardapios diferentes)
-       //sysout opções de entrar como cozinheiro e cliente-> no cozinheiro, opção de mostrar pedidos
-       //fazer aparecer os itens do cardapio na tela do cliente pra pedir, e mostrar apos isso o pedido feito na tela do cozinheiro
-       //classe pedido -> Pedido pedido = new Pedido(); novopedido = sc.nextLine(); pedido.getPedido(novopedido); -> na classen é um return 
-       //Cardapio cardapio -> pro cozinheiro adicionar itens, e depois exibir tudo para o cliente
-
     }
 
-    public LinkedList listaCozinheiros() {
+    /*public LinkedList listaCozinheiros() {
         return null;
     }
 
     public LinkedList listaClientes() {
         return null;
-    }
-
+    }*/
 
     public static void exibiropcoes() {
         Scanner sc = new Scanner(System.in);
@@ -61,7 +44,6 @@ public class Aplicacao {
         Cliente cliente = new Cliente(nome, user, senha);
         LinkedList<Pessoa> listaCozinheiros = new LinkedList<Pessoa>();
         LinkedList<Pessoa> listaClientes = new LinkedList<Pessoa>();
-
     
         int op = 0;
         do {
@@ -75,23 +57,23 @@ public class Aplicacao {
                 while(op < 1 && op > 5);
             }
             if (op == 1) {
-                
                 Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
-                try{
-                    if(listaCozinheiros.contains(cozinheiroLogin.getSenha())){
+                //try{
+                    if(listaCozinheiros.contains(cozinheiroLogin)){
                         System.out.println("Login efetuado com sucesso!");
+                        cozinheiros.exibirTelaCozinheiro();
                         //EntrarCozinheiro retorna login(tipo pessoa)
                         //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
                         // não usar esse objeto novo que eu criei de comparação pra mostrar
-                }
-            } catch(LoginException e){
+                        //}
+                        } else {
                 System.out.println("Usuário não corresponde / Senha incorreta"); 
-            }
+                }
             
             }
             else if (op== 2) {
                 Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
-                if(listaCozinheiros.contains(novoCozinheiro.getUser())){
+                if(listaCozinheiros.contains(novoCozinheiro)){
                     System.out.println("Usuário já cadastrado!");
                 }
                 else{
@@ -101,18 +83,15 @@ public class Aplicacao {
             }
             else if (op == 3) {
                 Pessoa clienteLogin = cliente.EntrarCliente();
-                if(listaClientes.contains(clienteLogin.getSenha())){
+                if(listaClientes.contains(clienteLogin)){
                     System.out.println("Login efetuado com sucesso!");
-                    
-                    System.out.println("Veja nossas opções!");
+                    System.out.println(" ");
+                    System.out.println("========= Escolha um cozinheiro ========");
                     System.out.println();
                     int size = listaCozinheiros.size();
-
                     for(int i = 0; i < size; i++){
-                        System.out.println(listaCozinheiros.get(i));
+                        System.out.println(i+1 + ". " + listaCozinheiros.get(i));
                     }
-
-                
                 }
                 else{
                     System.out.println("Usuário não corresponde / Senha incorreta"); 
@@ -128,10 +107,7 @@ public class Aplicacao {
                     listaClientes.addLast(novoCliente);
                     System.out.println("Cadastro feito com sucesso!");
                 }
-                
-                
             }
-
             else if (op == 5){
                 System.out.println("Você ficou offline");
                 return; 

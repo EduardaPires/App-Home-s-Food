@@ -7,6 +7,7 @@ public class Cliente extends Pessoa{
     int senha=0;
     Pessoa perfil = new Pessoa(nome, user, senha);
     private Cozinheiros cozinheiros;
+    
     public Cliente(String nome, String user, int senha) {
        super(nome, user, senha);
        this.pedido = pedido;
@@ -30,17 +31,11 @@ public class Cliente extends Pessoa{
         return resultado;
     }
 
-   // public void menu(){
-   //     Pessoa pessoa=CadastroCliente();
-   //     System.out.println(" ");
-   //     System.out.println(pessoa.toString());
-   // }
-
     public Pessoa EntrarCliente() {
        // menu();
         System.out.println("Digite seu nome de usuário: ");
         String nomeInserido = sc.nextLine();
-        sc.nextLine();
+        nomeInserido = sc.nextLine();
         //nomeInserido = sc.nextLine();
 
         System.out.println("Digite uma senha numérica: ");

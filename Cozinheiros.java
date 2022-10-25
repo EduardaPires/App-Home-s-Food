@@ -11,6 +11,9 @@ public class Cozinheiros extends Pessoa{
     private float mediaAvaliacao;//media das avaliacoes
     private int quantidadeDeAvaliacoes;
     private int indescolhido;
+    String nome="", user="";
+    int senha=0;
+    Pessoa perfil = new Pessoa(nome, user, senha);
 
     
     public Cozinheiros(String nome, String user, int senha) {
@@ -22,14 +25,10 @@ public class Cozinheiros extends Pessoa{
     }
 
     public Pessoa CadastroCozinheiro() {
-        String nome="", user="";
-        int senha=0;
-        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
         nome = sc.nextLine();
         perfil.setNome(nome);
         System.out.println("Digite uma senha numérica: ");
-        //exceção de int 
         senha = sc.nextInt();
         perfil.setSenha(senha);
         user = "Cozinheiro";
@@ -50,20 +49,21 @@ public class Cozinheiros extends Pessoa{
         for (int i = 0; i < quantidadeDeCardapios; i++) {
             System.out.println("Prato "+(i+1)+ ": " + cardapio[i]);
         }
+
         return perfil;
     }
 
     public Pessoa EntrarCozinheiro() {
-        String nome="", user="";
-        int senha=0;
-        Pessoa perfil = new Pessoa(nome, user, senha); //em vez de super usar perfil
         System.out.println("Digite seu nome de usuário: ");
-        nome = sc.nextLine();
+        String nomeInserido = sc.nextLine();
+        //nomeInserido = sc.nextLine();
+
         System.out.println("Digite uma senha numérica: ");
-        //exceção de int 
-        senha = sc.nextInt();
+        int senhaInserida = sc.nextInt();
         user = "Cozinheiro";
-        Pessoa login = new Pessoa(nome, user, senha);
+
+        Pessoa login = new Pessoa(nomeInserido, user, senhaInserida);
+
         return login;
     }
 
@@ -186,25 +186,4 @@ public class Cozinheiros extends Pessoa{
         
     }
 
-   // public void adcionarOpcaoNoCardapio (String prato){
-   //     this.cardapio[quantidadeDeCardapios] = prato;
-   //     quantidadeDeCardapios++;
-  //  }
-
-  
-    /*public void exibirTelaCozinheiro(){
-        //chamar metodo exibirCardapio
-        System.out.println("Deseja adicionar algo no seu cardápio?");
-        String resposta = sc.nextLine();
-        if (resposta == "sim") {
-            //chamar método addOpcnoCardapio
-        }
-        System.out.println("==========================");
-        System.out.println("Você tem um x pedidos:");
-        //for (int i = 0; i < tamanhoCardapio.length; i++) {
-            //sysout("item[i], quantidade: [i]");
-        //}
-    }*/
-
-   
 }

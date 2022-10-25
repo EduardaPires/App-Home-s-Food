@@ -3,14 +3,6 @@ public class Pessoa {
     private String nome, user;
     //String email;
     private int senha;
-    
-
-    //construtor(inicializar as variaveis de instancia)
-    //public Pessoa(String nome, String user, int senha){
-       // this.nome=nome;
-       // this.email=email;
-       // this.senha=senha;
-    //}
 
     public Pessoa(String nome, String user, int senha) {  //construtor de pessoa (cozinheiro ou cliente)
         this.nome = nome;
@@ -59,4 +51,9 @@ public class Pessoa {
     public String toString(){
         return "\u001b[1m" + user + ": " + nome + "\u001b[m ";
     }
+
+    public String cozinheiros(){
+        return "\u001b[1m" + nome + "\u001b[m ";
+    }
 }
+
