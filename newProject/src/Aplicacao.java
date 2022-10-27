@@ -27,8 +27,9 @@ public class Aplicacao {
         //incialização do objeto Pessoa para chamar métodos das classes cozinheiros e cliente
         String nome="", user="";
         int senha=0;
+        String[] cardapio = {};
         //chamando objetos das classes
-        Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
+        Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha, cardapio);
         Cliente cliente = new Cliente(nome, user, senha);
         //criação de listas
         LinkedList<Pessoa> listaCozinheiros = new LinkedList<Pessoa>();
@@ -42,7 +43,7 @@ public class Aplicacao {
                 if(listaCozinheiros.contains(cozinheiroLogin)){
                     System.out.println("Login efetuado com sucesso!");
                     cozinheiros.exibirTelaCozinheiro();
-                    
+
                 } else {
                     System.out.println("Usuário não corresponde / Senha incorreta"); 
                 }
