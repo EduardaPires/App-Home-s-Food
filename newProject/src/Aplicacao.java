@@ -6,7 +6,6 @@ public class Aplicacao {
     
     Scanner sc = new Scanner(System.in);
     //nao herda a superclasse pessoa, apenas a chama
-
     public static void opcoes(){
         System.out.println("");
         System.out.println(" ======= HOME'S FOOD ======= ");
@@ -20,52 +19,33 @@ public class Aplicacao {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
         exibiropcoes();
     }
 
-    /*public LinkedList listaCozinheiros() {
-        return null;
-    }
-
-    public LinkedList listaClientes() {
-        return null;
-    }*/
-
     public static void exibiropcoes() {
         Scanner sc = new Scanner(System.in);
+        //incialização do objeto Pessoa para chamar métodos das classes cozinheiros e cliente
         String nome="", user="";
         int senha=0;
+        //chamando objetos das classes
         Cozinheiros cozinheiros = new Cozinheiros(nome, user, senha);
         Cliente cliente = new Cliente(nome, user, senha);
+        //criação de listas
         LinkedList<Pessoa> listaCozinheiros = new LinkedList<Pessoa>();
         LinkedList<Pessoa> listaClientes = new LinkedList<Pessoa>();
     
         int op = 0;
         do {
-            try{
-                
-                opcoes(); 
-                op = sc.nextInt();sc.nextLine();
-            }
-            catch (RuntimeException re){
-                System.out.println("numero invalido");
-                while(op < 1 && op > 5);
-            }
-            if (op == 1) {
-                Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
-                //try{
-                    if(listaCozinheiros.contains(cozinheiroLogin)){
-                        System.out.println("Login efetuado com sucesso!");
-                        cozinheiros.exibirTelaCozinheiro();
-                        //EntrarCozinheiro retorna login(tipo pessoa)
-                        //Duds, meu amor neném bebê lindoca, chama os métodos de mostrar a tela do user aqui
-                        // não usar esse objeto novo que eu criei de comparação pra mostrar
-                        //}
-                        } else {
-                System.out.println("Usuário não corresponde / Senha incorreta"); 
+        if (op == 1) {
+            Pessoa cozinheiroLogin = cozinheiros.EntrarCozinheiro();
+            //try{
+                if(listaCozinheiros.contains(cozinheiroLogin)){
+                    System.out.println("Login efetuado com sucesso!");
+                    cozinheiros.exibirTelaCozinheiro();
+                    
+                } else {
+                    System.out.println("Usuário não corresponde / Senha incorreta"); 
                 }
-            
             }
             else if (op== 2) {
                 Pessoa novoCozinheiro = cozinheiros.CadastroCozinheiro();
@@ -109,10 +89,13 @@ public class Aplicacao {
                 return; 
             }
         } while (op !=5);
+
+    }
     }
 
 
-   
+  
 
-}
+
+
 
