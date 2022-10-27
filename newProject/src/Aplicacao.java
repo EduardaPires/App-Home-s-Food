@@ -2,9 +2,6 @@
 import java.util.LinkedList;
 import java.util.Scanner;
 
-import javax.management.ValueExp;
-
-
 public class Aplicacao {
     
     Scanner sc = new Scanner(System.in);
