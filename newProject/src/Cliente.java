@@ -43,7 +43,6 @@ public class Cliente extends Pessoa{
         user = "Cliente";
 
         Pessoa login = new Pessoa(nomeInserido, user, senhaInserida);
-
         return login;
     }
 
