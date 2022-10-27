@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 import javax.management.ValueExp;
 
-import Exception.LoginException;
 
 public class Aplicacao {
     
