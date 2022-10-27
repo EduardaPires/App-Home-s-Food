@@ -15,7 +15,7 @@ public class Cozinheiros extends Pessoa{
     Pessoa perfil = new Pessoa(nome, user, senha);
 
     
-    public Cozinheiros(String nome, String user, int senha) {
+    public Cozinheiros(String nome, String user, int senha, String[] cardapio) {
         super(nome, user, senha);
         this.cardapio = new String[4];
         this.avaliacao=avaliacao;
